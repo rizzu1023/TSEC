@@ -8,12 +8,15 @@
                     <i class="nav-icon icon-drop"></i> Dashboard</a>
             </li>
             @endif
+
+            @if(auth()->user()->Vendor)
             @if(Auth()->user()->Vendor->isVendor == '1')
             <li class="nav-item">
                 <a class="nav-link" href="/admin/item">
                     <i class="nav-icon icon-drop"></i>Item</a>
             </li>
             @endif
+                @endif
 
 {{--            <li class="nav-item">--}}
 {{--                <a class="nav-link" href="#">--}}

@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Cart;
+use App\Item;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class CartController extends Controller
 {
@@ -14,7 +17,7 @@ class CartController extends Controller
      */
     public function index()
     {
-        //
+        return view('Main.cart');
     }
 
     /**
@@ -31,11 +34,22 @@ class CartController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
-        //
+//        return $request->all();
+
+//        Cart::create([
+//            'user_id' => $request->user_id,
+//            'item_id' => $request->item_id,
+//        ]);
+
+        $item = Item::find(request('item_id'));
+        $user = User::find(request('user_id'));
+        $user->Item()->syncWithoutDetaching($item);
+
+        return redirect::back()->with('message','Added to Cart');
     }
 
     /**
@@ -76,10 +90,14 @@ class CartController extends Controller
      * Remove the specified resource from storage.
      *
      * @param  \App\Cart  $cart
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function destroy(Cart $cart)
+    public function destroy(Cart $cart,$id)
     {
-        //
+        $item = Item::find($id);
+        $user = User::find(auth()->user()->id);
+        $user->Item()->detach($item);
+
+        return redirect::back()->with('message','Removed from cart');
     }
 }

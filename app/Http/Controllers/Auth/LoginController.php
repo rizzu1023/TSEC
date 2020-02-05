@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\Redirect;
 use Laravel\Socialite\Facades\Socialite;
 use App\User;
 
@@ -41,6 +44,18 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    public function authenticate(Request $request)
+    {
+        $credentials = $request->only('email', 'password');
+
+        if (Auth::attempt($credentials)) {
+            // Authentication passed...
+            return redirect()->intended('Main.index');
+        }
+        else
+            return redirect::back()->message('message','Email Or Password Incorrect!');
+    }
+
 
 
     public function redirectToProvider()
@@ -56,7 +71,7 @@ class LoginController extends Controller
         $findUser = User::where('email', $facebook->email)->first();
         if($findUser){
             Auth::login($findUser);
-            return "login wiht old";
+            return redirect::route('index')->with('message','Successfully Logged in');
         }
         else{
             $user = New User;
@@ -65,7 +80,7 @@ class LoginController extends Controller
             $user->password = bcrypt(123456);
             $user->save();
             Auth::login($user);
-            return "login with new";
+            return redirect::route('index')->with('message','Successfully Logged in');
         }
     }
 

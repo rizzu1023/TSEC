@@ -1,11 +1,10 @@
 <?php
 
-use Facade\Ignition\Tabs\Tab;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCustomersTable extends Migration
+class CreateItemUserTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,12 +13,10 @@ class CreateCustomersTable extends Migration
      */
     public function up()
     {
-        Schema::create('customers', function (Blueprint $table) {
+        Schema::create('item_user', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('address')->nullable();
-//            $table->integer('cart_id');
-//            $table->integer('purchased_id');
             $table->unsignedInteger('user_id');
+            $table->unsignedInteger('item_id');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateCustomersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('customers');
+        Schema::dropIfExists('item_user');
     }
 }

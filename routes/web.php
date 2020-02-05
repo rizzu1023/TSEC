@@ -14,12 +14,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('vendor','VendorController@create')->name('vendor.create');
-Route::post('vendor','VendorController@store')->name('vendor.store');
 
 Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
 Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
@@ -38,4 +33,19 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function(){
     Route::resource('/offer','OfferController');
 
 });
+
+Route::get('/', 'MainController@index')->name('index');
+Route::get('/cart','MainController@cart')->middleware('auth');
+Route::post('/cart','CartController@store')->middleware('auth');
+Route::delete('/cart/{id}','CartController@destroy')->middleware('auth');
+Route::get('/login/show','MainController@login');
+Route::post('/logins','Auth\LoginController@authenticate');
+Route::get('/vendor','MainController@vendor');
+Route::post('/vendor','VendorController@store')->name('vendor.store');
+
+Route::get('/account','MainController@account')->middleware('auth');
+Route::get('/order','MainController@order');
+Route::get('/confirmation','MainController@confirmation');
+
+
 

@@ -37,9 +37,19 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
+        if($request->hasFile('image')){
+            $fileNameWithExt = $request->file('image')->getClientOriginalName();
+            $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+            $extension =$request->file('image')->getClientOriginalExtension();
+            $fileNameToStore = $fileName.'_'.time().'.'.$extension;
+            $path = $request->file('image')->storeAs('public/item/images',$fileNameToStore);
+        }
+        else{
+            $fileNameToStore = 'default.jpeg';
+        }
         $item = Item::create([
             'name' => $request->name,
-            'image' => $request->image,
+            'image' => $fileNameToStore,
             'price' => $request->price,
             'category' => $request->category,
             'size' => $request->size,
@@ -55,7 +65,7 @@ class ItemController extends Controller
             'warranty' => $request->warranty,
             'model' => $request->model,
         ]);
-        
+
         return redirect::route('item.index')->with('message','Item has been succesfully Added.');
     }
 

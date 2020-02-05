@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Cart;
+use App\Customer;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
@@ -69,5 +71,13 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+
+//        $customer = new Customer;
+//        $customer->address = 'this is address';
+//        $customer->user_id = $user->id;
+//        $customer->save();
+//
+//
+//        return "Success";
     }
 }
