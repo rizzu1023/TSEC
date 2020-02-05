@@ -221,6 +221,7 @@ img {
   max-width: 100%;
 }
 
+
 /* line 153, ../../01 cl html template/03_jun 2019/188_Aranoz shop_html/sass/_common.scss */
 a:focus,
 .button:focus,
@@ -2113,6 +2114,7 @@ ul {
 .main_menu .navbar-brand {
   padding-top: 0rem;
   padding-bottom: 0px;
+  
 }
 
 /* line 14, ../../01 cl html template/03_jun 2019/188_Aranoz shop_html/sass/_menu.scss */
