@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
+use Laravel\Socialite\Facades\Socialite;
+use App\User;
 
 class LoginController extends Controller
 {
@@ -37,4 +40,33 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+
+
+
+    public function redirectToProvider()
+    {
+        return Socialite::driver('facebook')->redirect();
+    }
+
+
+    public function handleProviderCallback()
+    {
+        $facebook = Socialite::driver('facebook')->user();
+
+        $findUser = User::where('email', $facebook->email)->first();
+        if($findUser){
+            Auth::login($findUser);
+            return "login wiht old";
+        }
+        else{
+            $user = New User;
+            $user->name = $facebook->name;
+            $user->email = $facebook->email;
+            $user->password = bcrypt(123456);
+            $user->save();
+            Auth::login($user);
+            return "login with new";
+        }
+    }
+
 }
