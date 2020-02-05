@@ -11,6 +11,7 @@
 |
 */
 
+use App\Http\Controllers\GeoLocationController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -59,6 +60,7 @@ Route::get('/product/single/filter/{brand}','MainController@singleProductBrand')
 Route::get('/customer/register','AdminController@registerShow')->name('register.show');
 Route::post('/customer/register','AdminController@register')->name('register.store');
 
+Route::get('/location','GeoLocationController@location');
 
 
 
