@@ -27,52 +27,61 @@
                 <div class="col-lg-8">
                     <h1>Customer Details</h1>
                     <br>
-                    <form class="row contact_form" action="#" method="post" novalidate="novalidate">
-                        <div class="col-md-6 form-group p_star">
-                            <input type="text" class="form-control" id="first" name="name" />
-                            <span class="placeholder" data-placeholder="First name"></span>
-                        </div>
-                        <div class="col-md-6 form-group p_star">
-                            <input type="text" class="form-control" id="last" name="name" />
-                            <span class="placeholder" data-placeholder="Last name"></span>
+                    <form class="row contact_form" action="{{Route('register.store')}}" method="post" novalidate="novalidate">
+                       @csrf
+                        <div class="col-md-12 form-group p_star">
+                            <input type="text" class="form-control" id="first" name="name" placeholder="Full Name"/>
+{{--                            <span class="placeholders" ></span>--}}
                         </div>
 
+
                         <div class="col-md-6 form-group p_star">
-                            <input type="text" class="form-control" id="number" name="number" />
-                            <span class="placeholder" data-placeholder="Phone number"></span>
+                            <input type="text" class="form-control" id="number" name="mobile_no" placeholder="Phone number"/>
+{{--                            <span class="placeholder" ></span>--}}
                         </div>
                         <div class="col-md-6 form-group p_star">
-                            <input type="text" class="form-control" id="email" name="compemailany" />
-                            <span class="placeholder" data-placeholder="Email Address"></span>
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Email Address"/>
+{{--                            <span class="placeholder" ></span>--}}
+                        </div>
+                        <div class="col-md-6 form-group p_star">
+                            <input type="date" class="form-control" id="email" name="dob" placeholder="Email Address"/>
                         </div>
                         <div class="col-md-12 form-group p_star">
-                            <select class="country_select">
-                                <option value="1">India</option>
-                                <option value="2">USA</option>
-                                <option value="4">Canada</option>
+                            <select class="country_select" name="gender">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
                             </select>
                         </div>
                         <div class="col-md-12 form-group p_star">
-                            <input type="text" class="form-control" id="add1" name="add1" />
-                            <span class="placeholder" data-placeholder="Address line 01"></span>
-                        </div>
-                        <div class="col-md-12 form-group p_star">
-                            <input type="text" class="form-control" id="add2" name="add2" />
-                            <span class="placeholder" data-placeholder="Address line 02"></span>
-                        </div>
-                        <div class="col-md-12 form-group p_star">
-                            <input type="text" class="form-control" id="city" name="city" />
-                            <span class="placeholder" data-placeholder="Town/City"></span>
-                        </div>
-                        <div class="col-md-12 form-group p_star">
-                            <select class="country_select">
-                                <option value="1">District</option>
-                                <option value="2">District</option>
-                                <option value="4">District</option>
+                            <select class="country_select" name="country">
+                                <option value="India">India</option>
+                                <option value="Usa">USA</option>
+                                <option value="Canada">Canada</option>
                             </select>
+                        </div>
+                        <div class="col-md-12 form-group p_star">
+                            <input type="text" class="form-control" id="add1" name="address" placeholder="Address line"/>
+{{--                            <span class="placeholder" ></span>--}}
+                        </div>
+
+
+                        <div class="col-md-12 form-group p_star">
+                            <select class="country_select" name="state">
+                                <option value="Rajasthan">Rajasthan</option>
+                                <option value="Maharastra">Maharastra</option>
+                                <option value="Delhi">Delhi</option>
+                            </select>
+                        </div>
+
+                        <div class="col-md-12 form-group p_star">
+                            <input type="text" class="form-control" id="city" name="city"  placeholder="Town/City"/>
+{{--                            <span class="placeholder"></span>--}}
                         </div>
                         <div class="col-md-12 form-group">
-                            <input type="text" class="form-control" id="zip" name="zip" placeholder="Postcode/ZIP" />
+                            <input type="text" class="form-control" id="zip" name="pincode" placeholder="Postcode/ZIP" />
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <input type="password" class="form-control" id="p" name="password" placeholder="password" />
                         </div>
                         <div class="col-md-12 form-group">
                             <div
@@ -82,16 +91,9 @@
                                 </label>
                             </div>
                         </div>
-                        <a class="btn_3" href="#">Sign UP</a>
+                        <button type="submit" class="btn_3" href="#">Sign UP</button>
 
-                        <div class="col-md-12 form-group">
-                            <!-- <div class="creat_account">
-                              <h3>Shipping Details</h3>
-                              <input type="checkbox" id="f-option3" name="selector" />
-                              <label for="f-option3">Ship to a different address?</label>
-                            </div> -->
 
-                        </div>
                     </form>
                 </div>
 

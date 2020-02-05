@@ -4,7 +4,7 @@
             <div class="col-lg-12">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <a class="logo navbar-brand" href="index.html"> <img style="height:30px;max-width:100%;"
-                                                                         src="img/logo.svg" alt="logo"> </a>
+                                                                         src="{{asset('Main/img/logo.svg')}}" alt="logo"> </a>
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -100,4 +100,16 @@
             </form>
         </div>
     </div>
+
+
+    @if(session()->has('message'))
+    <div class="search_input" id="search_input_box">
+        <div class="container ">
+            <form class="d-flex justify-content-between search-inner">
+                <p>{{ session()->get('message') }}</p>
+                <span class="ti-close" id="close_search" title="Close Search"></span>
+            </form>
+        </div>
+    </div>
+    @endif
 </header>

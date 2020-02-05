@@ -33,12 +33,17 @@
                             <li>
                                 <p>Full Name</p><span>{{Auth()->user()->name}}</span>
                             </li>
-
                             <li>
                                 <p>Email</p><span>{{Auth()->user()->email}}</span>
                             </li>
                             <li>
-                                <p>Gender</p><span>Male</span>
+                                <p>Mobiel Number</p><span>{{Auth()->user()->Customer->mobile_no}}</span>
+                            </li>
+                            <li>
+                                <p>Gender</p><span>{{Auth()->user()->Customer->gender}}</span>
+                            </li>
+                            <li>
+                                <p>DOB</p><span>{{Auth()->user()->Customer->dob}}</span>
                             </li>
                         </ul>
                     </div>
@@ -48,16 +53,19 @@
                         <h4>Address</h4>
                         <ul>
                             <li>
-                                <p>Street</p><span> 56/8</span>
+                                <p>Address</p><span> {{Auth()->user()->Customer->address}}</span>
                             </li>
                             <li>
-                                <p>city</p><span> Los Angeles</span>
+                                <p>city</p><span>{{Auth()->user()->Customer->city}}</span>
                             </li>
                             <li>
-                                <p>country</p><span> United States</span>
+                                <p>State</p><span>{{Auth()->user()->Customer->state}}</span>
                             </li>
                             <li>
-                                <p>postcode</p><span> 36952</span>
+                                <p>country</p><span>{{Auth()->user()->Customer->country}}</span>
+                            </li>
+                            <li>
+                                <p>pincode</p><span>{{Auth()->user()->Customer->pincode}}</span>
                             </li>
                         </ul>
                     </div>
@@ -65,7 +73,7 @@
 
             </div>
             <br><br>
-            <a href="update_profile.html" class="genric-btn primary circle">Edit</a>
+            <a href="#" class="genric-btn primary circle">Edit</a>
         </div>
     </section>
 

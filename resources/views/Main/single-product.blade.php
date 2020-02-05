@@ -49,7 +49,15 @@
                             <input class="input-number" type="text" value="1" min="0" max="10">
                             <span class="number-increment"> <i class="ti-plus"></i></span>
                         </div>
-                        <a href="#" class="btn_3">add to cart</a>
+                        <form id="my_form" action="/cart" method="post">
+                            @csrf
+                            <input type="hidden" value="{{$item->id}}" name="item_id">
+                            @auth
+                                <input type="hidden" value="{{auth()->user()->id}}" name="user_id">
+                            @endauth
+                            <button  class="add_cart btn btn-md btn_3">+ ADD TO CART <i class="ti-heart"></i></button>
+                        </form>
+
                         <!-- <a href="#" class="like_us"> <i class="ti-heart"></i> </a> -->
                     </div>
                 </div>
@@ -64,64 +72,73 @@
     <div class="container">
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
+                <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
+                   aria-selected="false">Specification</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home"
                    aria-selected="true">Description</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile"
-                   aria-selected="false">Specification</a>
-            </li>
+
             <!-- <li class="nav-item">
               <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact"
                 aria-selected="false">Comments</a>
             </li> -->
             <li class="nav-item">
-                <a class="nav-link active" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review"
+                <a class="nav-link" id="review-tab" data-toggle="tab" href="#review" role="tab" aria-controls="review"
                    aria-selected="false">Reviews</a>
             </li>
         </ul>
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
                 <p>
-                    Beryl Cook is one of Britain’s most talented and amusing artists
-                    .Beryl’s pictures feature women of all shapes and sizes enjoying
-                    themselves .Born between the two world wars, Beryl Cook eventually
-                    left Kendrick School in Reading at the age of 15, where she went
-                    to secretarial school and then into an insurance office. After
-                    moving to London and then Hampton, she eventually married her next
-                    door neighbour from Reading, John Cook. He was an officer in the
-                    Merchant Navy and after he left the sea in 1956, they bought a pub
-                    for a year before John took a job in Southern Rhodesia with a
-                    motor company. Beryl bought their young son a box of watercolours,
-                    and when showing him how to use it, she decided that she herself
-                    quite enjoyed painting. John subsequently bought her a child’s
-                    painting set for her birthday and it was with this that she
-                    produced her first significant work, a half-length portrait of a
-                    dark-skinned lady with a vacant expression and large drooping
-                    breasts. It was aptly named ‘Hangover’ by Beryl’s husband and
-                </p>
-                <p>
-                    It is often frustrating to attempt to plan meals that are designed
-                    for one. Despite this fact, we are seeing more and more recipe
-                    books and Internet websites that are dedicated to the act of
-                    cooking for one. Divorce and the death of spouses or grown
-                    children leaving for college are all reasons that someone
-                    accustomed to cooking for more than one would suddenly need to
-                    learn how to adjust all the cooking practices utilized before into
-                    a streamlined plan of cooking that is more efficient for one
-                    person creating less
+                  {{$item->description}}
                 </p>
             </div>
-            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                 <div class="table-responsive">
                     <table class="table">
                         <tbody>
                         <tr>
                             <td>
+                                <h5>Branch</h5>
+                            </td>
+                            <td>
+                                <h5>{{$item->brand}}</h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h5>Model Number</h5>
+                            </td>
+                            <td>
+                                <h5>{{$item->model_no}}</h5>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <h5>Color</h5>
+                            </td>
+                            <td>
+                                <h5>{{$item->color}}</h5>
+                            </td>
+                        </tr>
+                        @if($item->size)
+                        <tr>
+                            <td>
+                                <h5>Size</h5>
+                            </td>
+                            <td>
+                                <h5>{{$item->size}}</h5>
+                            </td>
+                        </tr>
+                        @endif
+                        <tr>
+                            <td>
                                 <h5>Width</h5>
                             </td>
                             <td>
-                                <h5>128mm</h5>
+                                <h5>{{$item->width}} cm</h5>
                             </td>
                         </tr>
                         <tr>
@@ -129,57 +146,29 @@
                                 <h5>Height</h5>
                             </td>
                             <td>
-                                <h5>508mm</h5>
+                                <h5>{{$item->height}} cm</h5>
                             </td>
                         </tr>
-                        <tr>
-                            <td>
-                                <h5>Depth</h5>
-                            </td>
-                            <td>
-                                <h5>85mm</h5>
-                            </td>
-                        </tr>
+
                         <tr>
                             <td>
                                 <h5>Weight</h5>
                             </td>
                             <td>
-                                <h5>52gm</h5>
+                                <h5>{{$item->weight}} gm</h5>
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                <h5>Quality checking</h5>
+                                <h5>Warranty</h5>
                             </td>
                             <td>
-                                <h5>yes</h5>
+                                <h5>{{$item->warranty}} year</h5>
                             </td>
                         </tr>
-                        <tr>
-                            <td>
-                                <h5>Freshness Duration</h5>
-                            </td>
-                            <td>
-                                <h5>03days</h5>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h5>When packeting</h5>
-                            </td>
-                            <td>
-                                <h5>Without touch of hand</h5>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <h5>Each Box contains</h5>
-                            </td>
-                            <td>
-                                <h5>60pcs</h5>
-                            </td>
-                        </tr>
+
+
+
                         </tbody>
                     </table>
                 </div>
@@ -280,7 +269,7 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade show active" id="review" role="tabpanel" aria-labelledby="review-tab">
+            <div class="tab-pane fade" id="review" role="tabpanel" aria-labelledby="review-tab">
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="row total_rate">
