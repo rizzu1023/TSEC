@@ -17,6 +17,7 @@ class CreateVendorsTable extends Migration
             $table->bigIncrements('id');
             $table->string('document');
             $table->string('verified');
+            $table->unsignedInteger('user_id');
             $table->timestamps();
         });
     }
