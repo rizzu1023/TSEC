@@ -27,7 +27,8 @@
                 <div class="col-lg-8">
                     <h1>Customer Details</h1>
                     <br>
-                    <form class="row contact_form" action="#" method="post" novalidate="novalidate">
+                    <form class="row contact_form" action="{{Route('register.store')}}" method="post" novalidate="novalidate">
+                       @csrf
                         <div class="col-md-12 form-group p_star">
                             <input type="text" class="form-control" id="first" name="name" placeholder="Full Name"/>
 {{--                            <span class="placeholders" ></span>--}}
@@ -41,6 +42,15 @@
                         <div class="col-md-6 form-group p_star">
                             <input type="text" class="form-control" id="email" name="email" placeholder="Email Address"/>
 {{--                            <span class="placeholder" ></span>--}}
+                        </div>
+                        <div class="col-md-6 form-group p_star">
+                            <input type="date" class="form-control" id="email" name="dob" placeholder="Email Address"/>
+                        </div>
+                        <div class="col-md-12 form-group p_star">
+                            <select class="country_select" name="gender">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
                         </div>
                         <div class="col-md-12 form-group p_star">
                             <select class="country_select" name="country">
@@ -68,7 +78,10 @@
 {{--                            <span class="placeholder"></span>--}}
                         </div>
                         <div class="col-md-12 form-group">
-                            <input type="text" class="form-control" id="zip" name="zip" placeholder="Postcode/ZIP" />
+                            <input type="text" class="form-control" id="zip" name="pincode" placeholder="Postcode/ZIP" />
+                        </div>
+                        <div class="col-md-12 form-group">
+                            <input type="password" class="form-control" id="p" name="password" placeholder="password" />
                         </div>
                         <div class="col-md-12 form-group">
                             <div
@@ -78,16 +91,9 @@
                                 </label>
                             </div>
                         </div>
-                        <a class="btn_3" href="#">Sign UP</a>
+                        <button type="submit" class="btn_3" href="#">Sign UP</button>
 
-                        <div class="col-md-12 form-group">
-                            <!-- <div class="creat_account">
-                              <h3>Shipping Details</h3>
-                              <input type="checkbox" id="f-option3" name="selector" />
-                              <label for="f-option3">Ship to a different address?</label>
-                            </div> -->
 
-                        </div>
                     </form>
                 </div>
 

@@ -6,6 +6,7 @@ use App\Customer;
 use App\User;
 use App\Vendor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 
 class AdminController extends Controller
@@ -33,6 +34,7 @@ class AdminController extends Controller
     }
     public function register(Request $request){
 
+//        return $request->all();
         $request->validate([
             'name' => 'required',
             'email' => 'required|email|string|unique:users',
@@ -47,13 +49,19 @@ class AdminController extends Controller
 
         $customer = new Customer;
         $customer->user_id = $user->id;
-        $customer->dob = $user->dob;
-        $customer->gender = $user->gender;
-        $customer->country = $user->country;
-        $customer->state = $user->state;
-        $customer->city = $user->city;
-        $customer->pincode = $user->pincode;
-        $customer->address = $user->address;
+        $customer->dob = $request->dob;
+        $customer->gender = $request->gender;
+        $customer->mobile_no = $request->mobile_no;
+        $customer->country = $request->country;
+        $customer->state = $request->state;
+        $customer->city = $request->city;
+        $customer->pincode = $request->pincode;
+        $customer->address = $request->address;
         $customer->save();
+
+
+
+
+        return redirect::route('login.show')->with('message','You are successfully Registerd');
     }
 }

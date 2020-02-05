@@ -59,4 +59,14 @@ class MainController extends Controller
         $item = Item::where('id',$id)->first();
         return view('Main.single-product',compact('item'));
     }
+
+    public function productByBrand($category, $brand){
+        $items = Item::where('brand',$brand)->get();
+        return view('Main.category',compact('items'));
+    }
+
+    public function productByPrice($price){
+        $items = Item::where('price','>',$price)->get();
+        return view('Main.category',compact('items'));
+    }
 }
