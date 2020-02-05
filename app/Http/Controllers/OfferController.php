@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Offer;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class OfferController extends Controller
 {
@@ -14,7 +15,8 @@ class OfferController extends Controller
      */
     public function index()
     {
-        //
+        $offers = Offer::all();
+        return view('Admin.Offer.index',compact('offers'));
     }
 
     /**
@@ -24,7 +26,7 @@ class OfferController extends Controller
      */
     public function create()
     {
-        //
+        return view('Admin.Offer.create');
     }
 
     /**
@@ -35,7 +37,13 @@ class OfferController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $offer = Offer::create([
+            'offer_price' => $request->offer_price,
+            'offer_percent' => $request->offer_percent,
+            'item_id' => $request->item_id,
+        ]);
+
+        return redirect::route('offer.index')->with('message','Offer has been succesfully Applied.');
     }
 
     /**
@@ -46,7 +54,7 @@ class OfferController extends Controller
      */
     public function show(Offer $offer)
     {
-        //
+        return view('Admin.Offer.show',compact('offer'));
     }
 
     /**
@@ -80,6 +88,7 @@ class OfferController extends Controller
      */
     public function destroy(Offer $offer)
     {
-        //
+        $offer->delete();
+        return redirect::route('offer.index')->with('message','Successfully offer Deleted');
     }
 }

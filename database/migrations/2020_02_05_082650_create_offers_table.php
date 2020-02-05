@@ -18,6 +18,7 @@ class CreateOffersTable extends Migration
             $table->bigIncrements('id');
             $table->integer('offer_price');
             $table->string('offer_percent');
+            $table->integer('item_id');
             $table->timestamps();
         });
     }
