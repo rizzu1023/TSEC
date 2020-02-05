@@ -10,18 +10,30 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        Add Event
+                        Add Item
                     </div>
                     <div class="card-body">
-                        <form class="form-horizontal" method="post" action="{{ route('event.store') }}"
+                        <form class="form-horizontal" method="post" action="{{ route('item.store') }}"
                               enctype="multipart/form-data" id="eventCreateForm">
                             @csrf
 
                             <div class="form-group row">
-                                <label class="col-md-2 col-form-label" for="title">Event Name</label>
+                                <label class="col-md-2 col-form-label" for="title">Item Name</label>
                                 <div class="col-md-8">
                                     <input class="form-control" id="title" type="text" name="name"
-                                           placeholder="Cricket">
+                                           placeholder="clothes">
+                                </div>
+
+                                <label class="col-md-2 col-form-label" for="image">Image</label>
+                                <div class="col-md-3">
+                                    <input class="form-control" id="email-input" type="file" name="image"
+                                           placeholder="upload images..">
+                                </div>
+
+                                <label class="col-md-2 col-form-label" for="fees">Price</label>
+                                <div class="col-md-3">
+                                    <input class="form-control" id="email-input" type="number" name="price"
+                                           placeholder="Eg. 450\-">
                                 </div>
                             </div>
 
@@ -30,15 +42,47 @@
                                 <div class="col-md-3">
                                     <select class="form-control" id="duration" name="category">
                                         <option selected disabled>select category</option>
-                                        <option value="boys">Boys</option>
-                                        <option value="girls">Girls</option>
+                                        <option value="books">Books</option>
+                                        <option value="clothing">Clothing</option>
+                                        <option value="electronic">Electronic</option>
+                                        <option value="furniture">Furniture</option>
+                                        <option value="sports">Sports</option>
                                     </select>
                                 </div>
-                                <label class="col-md-2 col-form-label" for="fees">Venue</label>
+                                <label class="col-md-2 col-form-label" for="size">Size</label>
                                 <div class="col-md-3">
-                                    <input class="form-control" id="email-input" type="text" name="venue"
-                                           placeholder="Courtyard">
+                                    <input class="form-control" id="email-input" type="text" name="size"
+                                           placeholder="Eg:- M, L, XL">
                                 </div>
+
+                                <label class="col-md-2 col-form-label" for="color">Color</label>
+                                <div class="col-md-3">
+                                    <input class="form-control" id="email-input" type="text" name="color"
+                                           placeholder="Eg:- red, Green">
+                                </div>
+
+                                <label class="col-md-2 col-form-label" for="size">Description</label>
+                                <div class="col-md-3">
+                                    <input class="form-control" id="email-input" type="text" name="description"
+                                           placeholder="Eg:- Describe about the product">
+                                </div>
+
+                                <label class="col-md-2 col-form-label" for="size">Model</label>
+                                <div class="col-md-3">
+                                    <input class="form-control" id="email-input" type="text" name="model"
+                                           placeholder="">
+                                </div>
+
+                                <label class="col-md-2 col-form-label" for="duration">Vendor</label>
+                                <div class="col-md-3">
+                                    <select class="form-control" id="duration" name="vendor_id">
+                                        <option selected disabled>select Vendor</option>
+                                        @foreach($vendors as $vendor)
+                                            <option value="{{$vendor->id}}">{{$vendor->name}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+
                             </div>
 
                             <button id="rizz" class="btn btn-md btn-primary" type="submit" style="float: right">
