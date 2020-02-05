@@ -30,9 +30,13 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function(){
     Route::get('vendor/{id}','VendorController@show')->name('vendor.show');
 
     Route::resource('/item','ItemController')->middleware('vendor');
-    Route::resource('/offer','OfferController');
-
 });
+
+Route::get('checkout','PayController@checkout');
+Route::post('pay','PayController@pay');
+Route::get('pay-success', 'PayController@success');
+   
+Route::resource('/offer','OfferController');
 
 Route::get('/', 'MainController@index')->name('index');
 Route::get('/cart','MainController@cart')->middleware('auth');
