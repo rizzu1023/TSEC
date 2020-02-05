@@ -111,10 +111,12 @@
                                 @foreach($items as $item)
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
+                                        <a href="/product/single/{{$item->id}}">
                                         <img style="height:262px ;width: 280px" src="/storage/item/images/{{$item->image}}" alt="">
+                                        </a>
                                         <div class="single_product_text">
                                             <h4>{{$item->name}}</h4>
-                                            <h3>{{$item->price}} &#8377</h3>
+                                            <h3>&#8377 {{$item->price}} </h3>
                                             <form id="my_form" action="/cart" method="post">
                                                 @csrf
                                                 <input type="hidden" value="{{$item->id}}" name="item_id">

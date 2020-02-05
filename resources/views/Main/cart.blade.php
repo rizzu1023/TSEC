@@ -40,7 +40,7 @@
                             <td>
                                 <div class="media">
                                     <div class="d-flex">
-                                        <img src="/storage/item/images/{{$item->image}}" alt=""/>
+                                        <img style="height:200px; widows: 200px;" src="/storage/item/images/{{$item->image}}" alt=""/>
                                     </div>
                                     <div class="media-body">
                                         <p>{{$item->name}}</p>

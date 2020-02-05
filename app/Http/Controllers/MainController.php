@@ -45,4 +45,18 @@ class MainController extends Controller
     public function confirmation(){
         return view('Main.confirmation');
     }
+
+    public function contact(){
+        return view('Main.contact');
+    }
+
+    public function product($category){
+        $items = Item::where('category',$category)->get();
+        return view('Main.category',compact('items'));
+    }
+
+    public function singleProduct($id){
+        $item = Item::where('id',$id)->first();
+        return view('Main.single-product',compact('item'));
+    }
 }

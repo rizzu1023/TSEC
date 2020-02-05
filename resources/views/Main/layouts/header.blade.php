@@ -23,11 +23,11 @@
                                     Shop
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                    <a class="dropdown-item" href="category.html"> Electronics</a>
-                                    <a class="dropdown-item" href="catogery.html">Fashion</a>
-                                    <a class="dropdown-item" href="catogery.html">Sports</a>
-                                    <a class="dropdown-item" href="catogery.html">Furnitures</a>
-                                    <a class="dropdown-item" href="catogery.html">Books</a>
+                                    <a class="dropdown-item" href="/product/electronics">Electronics</a>
+                                    <a class="dropdown-item" href="/product/fashion">Fashion</a>
+                                    <a class="dropdown-item" href="/product/sports">Sports</a>
+                                    <a class="dropdown-item" href="/product/furniture">Furnitures</a>
+                                    <a class="dropdown-item" href="/product/books">Books</a>
 
                                 </div>
                             </li>
@@ -38,7 +38,7 @@
 
 
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact us</a>
+                                <a class="nav-link" href="/contact">Contact us</a>
                             </li>
 
                             @auth

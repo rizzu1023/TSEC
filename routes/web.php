@@ -46,6 +46,10 @@ Route::post('/vendor','VendorController@store')->name('vendor.store');
 Route::get('/account','MainController@account')->middleware('auth');
 Route::get('/order','MainController@order');
 Route::get('/confirmation','MainController@confirmation');
+Route::get('/contact','MainController@contact');
+Route::get('/product/{category}','MainController@product');
+Route::get('/product/single/{id}','MainController@singleProduct');
+
 
 
 
