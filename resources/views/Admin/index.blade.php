@@ -45,50 +45,30 @@
                 <th>ID</th>
                 <th>User</th>
                 <th>Email</th>
-                <th>Accept</th>
+
+                <th>Document</th>
             </tr>
             </thead>
             <tbody>
-            @foreach($users as $user)
-                @if($user->isVendor == '0')
+            @foreach($vendors as $vendor)
+                @if($vendor->isVendor == '0')
                 <tr>
                     <td>
                         {{ $loop->iteration }}
                     </td>
                     <td>
-                        <div>{{$user->name}}</div>
+                        <div>{{$vendor->User->name}}</div>
                         <div class="small text-muted">
                         </div>
                     </td>
                     <td>
                         <div>
-                            {{ $user->email }}
+                            {{ $vendor->User->email }}
                         </div>
                     </td>
+
                     <td>
-                        <form action="/admin/user/{{$user->id}}/vendor" method="post"
-                              onchange="submit()">
-                            @csrf
-                            @if($user->isVendor)
-                                <div class="">
-                                    <label class="switch switch-label switch-pill switch-outline-success-alt">
-                                        <input class="switch-input" type="checkbox" name="status"
-                                               checked>
-                                        <span class="switch-slider" data-checked="&#x2713;"
-                                              data-unchecked="&#x2715;"></span>
-                                    </label>
-                                </div>
-                            @else
-                                <div class="">
-                                    <label
-                                        class="switch switch-label switch-pill switch-outline-success-alt">
-                                        <input class="switch-input" type="checkbox" name="status">
-                                        <span class="switch-slider" data-checked="&#x2713;"
-                                              data-unchecked="&#x2715;"></span>
-                                    </label>
-                                </div>
-                            @endif
-                        </form>
+                        <a href="/admin/vendor/{{$vendor->id}}" class="btn btn-md btn-primary">Show</a>
                     </td>
                 </tr>
                 @endif
@@ -110,27 +90,27 @@
             </tr>
             </thead>
             <tbody>
-            @foreach($users as $user)
-                @if($user->isVendor == '1')
+            @foreach($vendors as $vendor)
+                @if($vendor->isVendor == '1')
                 <tr>
                     <td>
                         {{ $loop->iteration }}
                     </td>
                     <td>
-                        <div>{{$user->name}}</div>
+                        <div>{{$vendor->User->name}}</div>
                         <div class="small text-muted">
                         </div>
                     </td>
                     <td>
                         <div>
-                            {{ $user->email }}
+                            {{ $vendor->User->email }}
                         </div>
                     </td>
                     <td>
-                        <form action="/admin/user/{{$user->id}}/vendor/remove" method="post"
+                        <form action="/admin/user/{{$vendor->id}}/vendor/remove" method="post"
                               onchange="submit()">
                             @csrf
-                            @if($user->isVendor)
+                            @if($vendor->isVendor)
                                 <div class="">
                                     <label class="switch switch-label switch-pill switch-outline-success-alt">
                                         <input class="switch-input" type="checkbox" name="status"

@@ -3,26 +3,27 @@
 namespace App\Http\Controllers;
 
 use App\User;
+use App\Vendor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
 class AdminController extends Controller
 {
     public function dashboard(){
-        $users = User::all();
-        return view('Admin.index',compact('users'));
+        $vendors = Vendor::all();
+        return view('Admin.index',compact('vendors'));
     }
 
     public function vendor($id){
-        $user = User::where('id',$id)->first();
-        $user->isVendor = '1';
-        $user->save();
+        $vendor = Vendor::where('id',$id)->first();
+        $vendor->isVendor = '1';
+        $vendor->save();
         return redirect::route('dashboard')->with('message','Added to Vendor');
     }
     public function vendorRemove($id){
-        $user = User::where('id',$id)->first();
-        $user->isVendor = '0';
-        $user->save();
+        $vendor = Vendor::where('id',$id)->first();
+        $vendor->isVendor = '0';
+        $vendor->save();
         return redirect::route('dashboard')->with('message','Added to Vendor');
     }
 }
