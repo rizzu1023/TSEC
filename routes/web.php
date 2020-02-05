@@ -49,6 +49,8 @@ Route::get('/confirmation','MainController@confirmation');
 Route::get('/contact','MainController@contact');
 Route::get('/product/{category}','MainController@product');
 Route::get('/product/single/{id}','MainController@singleProduct');
+Route::get('/customer/register','AdminController@registerShow')->name('register.show');
+Route::post('/customer/register','AdminController@register')->name('register.store');
 
 
 
