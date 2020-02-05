@@ -698,7 +698,7 @@
     <script src="{{asset('Main/js/mail-script.js"></script>
     <!-- custom js -->
 
-    <script src="{{asset('Main/https://kit.fontawesome.com/588cda5f94.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/588cda5f94.js" crossorigin="anonymous"></script>
     <script src="{{asset('Main/js/custom.js"></script>
 </body>
 
