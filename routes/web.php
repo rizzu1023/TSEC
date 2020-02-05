@@ -11,6 +11,7 @@
 |
 */
 
+use App\Http\Controllers\GeoLocationController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -54,6 +55,7 @@ Route::get('/contact','MainController@contact');
 Route::get('/product/{category}','MainController@product');
 Route::get('/product/single/{id}','MainController@singleProduct');
 
+Route::get('/location','GeoLocationController@location');
 
 
 
