@@ -53,39 +53,18 @@
                                     </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
                                         <a class="dropdown-item" href="category.html"> Electronics</a>
-                                        <a class="dropdown-item" href="single-product.html">Fashion</a>
-                                        <a class="dropdown-item" href="single-product.html">Sports</a>
-                                        <a class="dropdown-item" href="single-product.html">Furnitures</a>
-                                        <a class="dropdown-item" href="single-product.html">Books</a>
-  
-  
+                                        <a class="dropdown-item" href="catogery.html">Fashion</a>
+                                        <a class="dropdown-item" href="catogery.html">Sports</a>
+                                        <a class="dropdown-item" href="catogery.html">Furnitures</a>
+                                        <a class="dropdown-item" href="catogery.html">Books</a>
                                         
                                     </div>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_3"
-                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        pages
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                                        <a class="dropdown-item" href="login.html"> login</a>
-                                        <a class="dropdown-item" href="tracking.html">tracking</a>
-                                        <a class="dropdown-item" href="checkout.html">product checkout</a>
-                                        <a class="dropdown-item" href="cart.html">shopping cart</a>
-                                        <a class="dropdown-item" href="confirmation.html">confirmation</a>
-                                        <a class="dropdown-item" href="elements.html">elements</a>
-                                    </div>
+
+                                <li class="nav-item">
+                                    <a class="nav-link" href="category.html">Recommends</a>
                                 </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_2"
-                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        blog
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                                        <a class="dropdown-item" href="blog.html"> blog</a>
-                                        <a class="dropdown-item" href="single-blog.html">Single blog</a>
-                                    </div>
-                                </li>
+
                                
                                 <li class="nav-item">
                                     <a class="nav-link" href="contact.html">Contact us</a>
