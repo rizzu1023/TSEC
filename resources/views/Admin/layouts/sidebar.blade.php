@@ -11,23 +11,7 @@
                 <a class="nav-link" href="/admin/item">
                     <i class="nav-icon icon-drop"></i>Item</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/admin/team">
-                    <i class="nav-icon icon-drop"></i> Teams</a>
-            </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="/admin/schedule">
-                    <i class="nav-icon icon-drop"></i> Schedule</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/admin/player">
-                    <i class="nav-icon icon-drop"></i> Players</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/admin/coordinator">
-                    <i class="nav-icon icon-pencil"></i> Coordinator</a>
-            </li>
 {{--            <li class="nav-item">--}}
 {{--                <a class="nav-link" href="#">--}}
 {{--                    <i class="nav-icon icon-pencil"></i> Members</a>--}}

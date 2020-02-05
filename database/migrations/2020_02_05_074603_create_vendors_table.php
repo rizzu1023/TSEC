@@ -21,6 +21,7 @@ class CreateVendorsTable extends Migration
             $table->string('document');
             $table->string('address');
             $table->integer('pincode');
+            $table->unsignedInteger('user_id');
             $table->timestamps();
         });
     }
