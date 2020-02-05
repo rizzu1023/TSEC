@@ -35,11 +35,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function(){
 
 
     Route::resource('/item','ItemController')->middleware('vendor');
-<<<<<<< HEAD
-
-    Route::resource('/offer','OfferController');
-    
-=======
->>>>>>> 5bc31c573272b14bf51bbfb8ac575833a3f5ed7f
 });
 
+Route::get('checkout','PayController@checkout');
+Route::post('pay','PayController@pay');
+Route::get('pay-success', 'PayController@success');
