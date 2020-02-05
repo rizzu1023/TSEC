@@ -19,5 +19,9 @@ class Item extends Model
     }
     protected $guarded=[];
 
+    public function User(){
+        return $this->belongsToMany(User::class)->withTimestamps();
+    }
+
 
 }

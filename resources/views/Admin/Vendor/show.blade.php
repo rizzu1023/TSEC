@@ -33,6 +33,12 @@
                     </div>
                     <div class="card-body">
                         <div class="form-group row">
+                            <div class="col-md-8">
+                                <p>Open <a href="/storage/vendors/documents/{{$vendor->document}}">Document</a></p>
+{{--                                <img src="/storage/vendors/documents/{{$vendor->document}}">--}}
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <label class="col-md-2 col-form-label" for="title">Name</label>
                             <div class="col-md-8">
                                 <span>{{ $vendor->User->name }}</span>

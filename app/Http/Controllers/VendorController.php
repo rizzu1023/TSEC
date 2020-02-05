@@ -37,6 +37,7 @@ class VendorController extends Controller
      */
     public function store(Request $request)
     {
+//        return $request->all();
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -45,13 +46,13 @@ class VendorController extends Controller
 
         if($request->hasFile('document')){
             $fileNameWithExt = $request->file('document')->getClientOriginalName();
-                $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
-                $extension =$request->file('document')->getClientOriginalExtension();
-                $fileNameToStore = $fileName.'_'.time().'.'.$extension;
-                $path = $request->file('document')->storeAs('public/vendor/documents',$fileNameToStore);
+            $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+            $extension =$request->file('document')->getClientOriginalExtension();
+            $fileNameToStore = $fileName.'_'.time().'.'.$extension;
+            $path = $request->file('document')->storeAs('public/vendors/documents',$fileNameToStore);
         }
         else{
-            $fileNameToStore = 'noimage.jpg';
+            $fileNameToStore = 'default.jpeg';
         }
 
         $vendor = new Vendor;
@@ -60,6 +61,7 @@ class VendorController extends Controller
         $vendor->document = $fileNameToStore;
         $vendor->address = $request->address;
         $vendor->pincode = $request->pincode;
+        $vendor->save();
 
         return "success";
     }

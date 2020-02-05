@@ -43,6 +43,13 @@ class User extends Authenticatable
 
     public function Customer(){
         return $this->hasOne(Customer::class,'user_id');
+    }
 
+    public function Cart(){
+        return $this->hasMany(Cart::class,'user_id','id');
+    }
+
+    public function Item(){
+        return $this->belongsToMany(Item::class)->withTimestamps();
     }
 }
