@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Item;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class ItemController extends Controller
 {
@@ -14,7 +15,8 @@ class ItemController extends Controller
      */
     public function index()
     {
-        return view('Admin.Item.index', compact('events'));
+        $items = Item::all();
+        return view('Admin.Item.index',compact('items'));
     }
 
     /**
@@ -24,7 +26,7 @@ class ItemController extends Controller
      */
     public function create()
     {
-        //
+        return view('Admin.Item.create');
     }
 
     /**
@@ -35,7 +37,20 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $item = Item::create([
+            'name' => $request->name,
+            'image' => $request->image,
+            'price' => $request->price,
+            'category' => $request->category,
+            'size' => $request->size,
+            'color' => $request->color,
+            'description' => $request->description,
+            'sub_category' => $request->sub_category,
+            'vendor_id' => $request->vendor_id,
+            'model' => $request->model,
+        ]);
+        
+        return redirect::route('item.index')->with('message','Item has been succesfully Added.');
     }
 
     /**
@@ -46,7 +61,8 @@ class ItemController extends Controller
      */
     public function show(Item $item)
     {
-        //
+        return view('Admin.Item.show',compact('item'));
+
     }
 
     /**
@@ -80,6 +96,7 @@ class ItemController extends Controller
      */
     public function destroy(Item $item)
     {
-        //
+        $item->delete();
+        return redirect::route('item.index')->with('message','Successfully Deleted');
     }
 }

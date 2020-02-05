@@ -17,4 +17,7 @@ class Item extends Model
     public function Cart(){
         return $this->belongsToMany(Cart::class)->withTimestamps();
     }
+    protected $guarded=[];
+
+
 }

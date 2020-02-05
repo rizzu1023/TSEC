@@ -12,34 +12,32 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <i class="fa fa-align-justify"></i>Coordinators
-                        <a class="btn btn-sm btn-primary" href="/admin/coordinator/create" style="float: right">Add Coordinator</a>
+                        <i class="fa fa-align-justify"></i>Offers
+                        <a class="btn btn-sm btn-primary" href="/admin/offer/create" style="float: right">Add Offers</a>
                     </div>
                     <div class="card-body">
                         <table class="table table-responsive-sm table-bordered">
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Name</th>
-                                <th>Number</th>
-                                <th>Category</th>
-                                <th>Event ID</th>
+                                <th>Offer Price</th>
+                                <th>Offer Percentage</th>
+                                <th>Item ID</th>
                                 <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($coordinators as $coordinator)
+                            @foreach($offers as $offer)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $coordinator->name }}</td>
-                                    <td>{{ $coordinator->number }}</td>
-                                    <td>{{ $coordinator->Category }}</td>
-                                    <td>{{ $coordinator->Event->name }}</td>
+                                    <td>{{ $offer->offer_price }}</td>
+                                    <td>{{ $offer->offer_percentage }}</td>
+                                    <td>{{ $offer->Item->name }}</td>
                                     <td>
 {{--                                        <a class="btn btn-sm btn-square btn-primary" href="/admin/coordinator/{{ $team->id }}">Detail</a>--}}
 {{--                                        <a class="btn btn-sm btn-square btn-warning"--}}
 {{--                                           href="/admin/coordinator/{{ $coordinator->id }}/edit">Edit</a>--}}
-                                        <form method="post" action="/admin/coordinator/{{$coordinator->id}}"
+                                        <form method="post" action="/admin/offer/{{$offer->id}}"
                                               style="display: inline-block">
                                             @csrf
                                             @method('DELETE')

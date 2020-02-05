@@ -11,39 +11,32 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        Add Team
+                        Add Offer
                     </div>
                     <div class="card-body">
-                        <form class="form-horizontal" method="post" action="{{ route('coordinator.store') }}"
+                        <form class="form-horizontal" method="post" action="{{ route('offer.store') }}"
                               enctype="multipart/form-data" id="teamCreateForm">
                             @csrf
 
                             <div class="form-group row">
-                                <label class="col-md-2 col-form-label" for="title">Coordinator Name</label>
+                                <label class="col-md-2 col-form-label" for="title">Offer Price</label>
                                 <div class="col-md-3">
-                                    <input class="form-control" id="title" type="text" name="name"
-                                           placeholder="e.g WANC">
+                                    <input class="form-control" id="title" type="number" name="offer_price"
+                                           placeholder="Eg:- 40">
                                 </div>
-                                <label class="col-md-2 col-form-label" for="tagline">Mobile No</label>
+                                <label class="col-md-2 col-form-label" for="tagline">Offer Percentage</label>
                                 <div class="col-md-3">
-                                    <input class="form-control" id="tagline" type="text" name="number"
-                                           placeholder="e.g 123456799">
+                                    <input class="form-control" id="tagline" type="text" name="offer_percentage"
+                                           placeholder="45 % (percent)">
                                 </div>
                             </div>
                             <div class="form-group row">
-                                <label class="col-md-2 col-form-label" for="tagline">Category</label>
-                                <div class="col-md-3">
-                                    <select class="form-control" id="member" name="category">
-                                        <option value="faculty">Faculty</option>
-                                        <option value="student">Student</option>
-                                    </select>
-                                </div>
-                                <label class="col-md-2 col-form-label" for="duration">Event</label>
+                                <label class="col-md-2 col-form-label" for="duration">Item</label>
                                 <div class="col-md-3">
                                     <select class="form-control" id="duration" name="event_id">
-                                        <option selected disabled>select event</option>
-                                        @foreach($events as $event)
-                                            <option value="{{$event->id}}">{{$event->name}}</option>
+                                        <option selected disabled>select item</option>
+                                        @foreach($items as $item)
+                                            <option value="{{$item->id}}">{{$item->name}}</option>
                                         @endforeach
                                     </select>
                                 </div>
