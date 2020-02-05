@@ -21,3 +21,11 @@ Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallba
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::prefix('admin')->group(function(){
+    Route::get('/dashboard','AdminController@dashboard')->name('dashboard');
+    Route::post('/user/{id}/vendor','AdminController@vendor');
+    Route::post('/user/{id}/vendor/remove','AdminController@vendorRemove');
+
+    Route::resource('/item','ItemController');
+});

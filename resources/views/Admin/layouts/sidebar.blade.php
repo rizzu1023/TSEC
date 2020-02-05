@@ -8,8 +8,8 @@
                     <i class="nav-icon icon-drop"></i> Dashboard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/admin/event">
-                    <i class="nav-icon icon-drop"></i> Event</a>
+                <a class="nav-link" href="/admin/item">
+                    <i class="nav-icon icon-drop"></i>Item</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/admin/team">

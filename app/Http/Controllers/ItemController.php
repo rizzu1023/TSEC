@@ -14,7 +14,7 @@ class ItemController extends Controller
      */
     public function index()
     {
-        //
+        return view('Admin.Item.index', compact('events'));
     }
 
     /**

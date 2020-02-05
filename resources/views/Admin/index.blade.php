@@ -15,29 +15,29 @@
             <div class="col-sm-6 col-lg-3">
                 <div class="card text-white bg-primary">
                     <div class="text-value card-header">1500+</div>
-                    <div class="card-body">Participants</div>
+                    <div class="card-body">Customers</div>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-3">
                 <div class="card text-white bg-danger">
                     <div class="text-value card-header">150+</div>
-                    <div class="card-body">Teams</div>
+                    <div class="card-body">Vendors</div>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-3">
                 <div class="card text-white bg-success">
                     <div class="text-value card-header">5+</div>
-                    <div class="card-body">Events</div>
+                    <div class="card-body">Items</div>
                 </div>
             </div>
             <div class="col-sm-6 col-lg-3">
                 <div class="card text-white bg-warning">
                     <div class="text-value card-header">50+</div>
-                    <div class="card-body">Members</div>
+                    <div class="card-body">Rating</div>
                 </div>
             </div>
         </div>
-
+        <h4 class="mt-5 mb-3">Request for Vendors</h4>
 
         <table class="table table-responsive-sm table-hover table-outline mb-0">
             <thead class="thead-light">
@@ -45,30 +45,115 @@
                 <th>ID</th>
                 <th>User</th>
                 <th>Email</th>
-                <th>Active</th>
+                <th>Accept</th>
             </tr>
             </thead>
             <tbody>
+            @foreach($users as $user)
+                @if($user->isVendor == '0')
                 <tr>
                     <td>
-                        1
+                        {{ $loop->iteration }}
                     </td>
                     <td>
-                        <div>name</div>
+                        <div>{{$user->name}}</div>
                         <div class="small text-muted">
-                            {{--                            <span>New</span> | Registered: Jan 1, 2015--}}
                         </div>
                     </td>
                     <td>
                         <div>
-                         email
+                            {{ $user->email }}
                         </div>
                     </td>
-
                     <td>
-                                <div class="badge badge-success">Online</div>
+                        <form action="/admin/user/{{$user->id}}/vendor" method="post"
+                              onchange="submit()">
+                            @csrf
+                            @if($user->isVendor)
+                                <div class="">
+                                    <label class="switch switch-label switch-pill switch-outline-success-alt">
+                                        <input class="switch-input" type="checkbox" name="status"
+                                               checked>
+                                        <span class="switch-slider" data-checked="&#x2713;"
+                                              data-unchecked="&#x2715;"></span>
+                                    </label>
+                                </div>
+                            @else
+                                <div class="">
+                                    <label
+                                        class="switch switch-label switch-pill switch-outline-success-alt">
+                                        <input class="switch-input" type="checkbox" name="status">
+                                        <span class="switch-slider" data-checked="&#x2713;"
+                                              data-unchecked="&#x2715;"></span>
+                                    </label>
+                                </div>
+                            @endif
+                        </form>
                     </td>
                 </tr>
+                @endif
+            @endforeach
+
+            </tbody>
+        </table>
+
+
+        <h4 class="mt-5 mb-3">Vendors</h4>
+
+        <table class="table table-responsive-sm table-hover table-outline mb-0">
+            <thead class="thead-light">
+            <tr>
+                <th>ID</th>
+                <th>User</th>
+                <th>Email</th>
+                <th>Remove</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach($users as $user)
+                @if($user->isVendor == '1')
+                <tr>
+                    <td>
+                        {{ $loop->iteration }}
+                    </td>
+                    <td>
+                        <div>{{$user->name}}</div>
+                        <div class="small text-muted">
+                        </div>
+                    </td>
+                    <td>
+                        <div>
+                            {{ $user->email }}
+                        </div>
+                    </td>
+                    <td>
+                        <form action="/admin/user/{{$user->id}}/vendor/remove" method="post"
+                              onchange="submit()">
+                            @csrf
+                            @if($user->isVendor)
+                                <div class="">
+                                    <label class="switch switch-label switch-pill switch-outline-success-alt">
+                                        <input class="switch-input" type="checkbox" name="status"
+                                               checked>
+                                        <span class="switch-slider" data-checked="&#x2713;"
+                                              data-unchecked="&#x2715;"></span>
+                                    </label>
+                                </div>
+                            @else
+                                <div class="">
+                                    <label
+                                        class="switch switch-label switch-pill switch-outline-success-alt">
+                                        <input class="switch-input" type="checkbox" name="status">
+                                        <span class="switch-slider" data-checked="&#x2713;"
+                                              data-unchecked="&#x2715;"></span>
+                                    </label>
+                                </div>
+                            @endif
+                        </form>
+                    </td>
+                </tr>
+                @endif
+            @endforeach
 
             </tbody>
         </table>
