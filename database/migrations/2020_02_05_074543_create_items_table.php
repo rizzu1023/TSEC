@@ -20,7 +20,7 @@ class CreateItemsTable extends Migration
             $table->string('price');
             $table->string('image');
             $table->string('category');
-            $table->integer('size')->nullable();
+            $table->string('size')->nullable();
             $table->string('color')->nullable();
             $table->string('description');
             $table->string('sub_category');

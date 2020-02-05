@@ -11,32 +11,43 @@
             <div class="col-lg-12">
                 <div class="card">
                     <div class="card-header">
-                        <i class="fa fa-align-justify"></i>Events
-                        <a class="btn btn-sm btn-primary" href="/admin/event/create" style="float: right">Add Event</a>
+                        <i class="fa fa-align-justify"></i>Item
+                        <a class="btn btn-sm btn-primary" href="/admin/item/create" style="float: right">Add Item</a>
                     </div>
                     <div class="card-body">
                         <table class="table table-responsive-sm table-bordered">
                             <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Event Name</th>
-                                <th>category</th>
-                                <th>Venue</th>
-                                <th>Action</th>
+                                <th>Item Name</th>
+                                <th>Image</th>
+                                <th>Price</th>
+                                <th>Category</th>
+                                <th>Size</th>
+                                <th>Color</th>
+                                <th>Sub_Category</th>
+                                <th>Model</th>
+                                <th>Vendor_Id</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($events as $event)
+                            @foreach($items as $item)
                                 <tr>
                                     <td>{{ $loop->iteration }}</td>
-                                    <td>{{ $event->name }}</td>
-                                    <td>{{ $event->category }}</td>
-                                    <td>{{ $event->venue }}</td>
+                                    <td>{{ $item->name }}</td>
+                                    <td>{{ $item->image }}</td>
+                                    <td>{{ $item->price }}</td>
+                                    <td>{{ $item->category }}</td>
+                                    <td>{{ $item->size }}</td>
+                                    <td>{{ $item->color }}</td>
+                                    <td>{{ $item->sub_category }}</td>
+                                    <td>{{ $item->model }}</td>
+                                    <td>{{ $item->vendor_id }}</td>
                                     <td>
                                         {{-- <a class="btn btn-sm btn-square btn-primary" href="/admin/event/{{$event->id}}">Detail</a> --}}
 {{--                                        <a class="btn btn-sm btn-square btn-warning"--}}
 {{--                                           href="/admin/event/{{$event->id}}/edit">Edit</a>--}}
-                                        <form method="post" action="/admin/event/{{ $event->id }}"
+                                        <form method="post" action="/admin/item/{{ $item->id }}"
                                               style="display: inline-block">
                                             @csrf
                                             @method('DELETE')
