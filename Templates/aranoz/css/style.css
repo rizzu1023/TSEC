@@ -1991,12 +1991,12 @@ ul {
 /* line 1451, ../../01 cl html template/03_jun 2019/188_Aranoz shop_html/sass/_blog.scss */
 .comment-form .form-control::placeholder {
   font-weight: 300;
-  color: #999999;
+  color: #fff;
 }
 
 /* line 1456, ../../01 cl html template/03_jun 2019/188_Aranoz shop_html/sass/_blog.scss */
 .comment-form .form-control::placeholder {
-  color: #777777;
+  color: #fff;
 }
 
 /* line 1461, ../../01 cl html template/03_jun 2019/188_Aranoz shop_html/sass/_blog.scss */
@@ -2150,7 +2150,7 @@ ul {
 
 /* line 46, ../../01 cl html template/03_jun 2019/188_Aranoz shop_html/sass/_menu.scss */
 .main_menu #search_input_box {
-  position: fixed;
+  position: relative;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
@@ -2180,7 +2180,7 @@ ul {
 .main_menu #search_input_box .form-control {
   background: transparent;
   border: 0;
-  color: #ffffff;
+  color: #000;
   font-weight: 400;
   font-size: 15px;
   padding: 0;
@@ -7267,7 +7267,7 @@ h6 {
   margin-bottom: -30px;
   border: 1px solid #999999;
   border-radius: 0;
-  color: #000;
+  color: #fff;
   display: flex;
   align-items: center;
 }
@@ -7776,3 +7776,24 @@ h6 {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+
+.vendorbtn
+{ display: inline-block;
+  width: 180px;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #ff3368;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: #fff;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  text-transform: capitalize;
+ 
+  text-transform: uppercase;
+  margin-top: 26px;
+  margin-left: 60px;
+}
