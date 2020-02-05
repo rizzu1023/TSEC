@@ -11,6 +11,7 @@
 |
 */
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -33,13 +34,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function(){
     Route::post('/user/{id}/vendor/remove','AdminController@vendorRemove');
     Route::get('vendor/{id}','VendorController@show')->name('vendor.show');
 
-
     Route::resource('/item','ItemController')->middleware('vendor');
-<<<<<<< HEAD
-
     Route::resource('/offer','OfferController');
-    
-=======
->>>>>>> 5bc31c573272b14bf51bbfb8ac575833a3f5ed7f
+
 });
 
