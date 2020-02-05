@@ -28,6 +28,7 @@
                                 <th>Sub_Category</th>
                                 <th>Model</th>
                                 <th>Vendor_Id</th>
+                                <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>

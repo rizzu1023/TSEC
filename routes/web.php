@@ -28,4 +28,5 @@ Route::prefix('admin')->group(function(){
     Route::post('/user/{id}/vendor/remove','AdminController@vendorRemove');
 
     Route::resource('/item','ItemController');
+    Route::resource('/offer','OfferController');
 });

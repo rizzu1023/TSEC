@@ -19,7 +19,7 @@
 
                             <div class="form-group row">
                                 <label class="col-md-2 col-form-label" for="title">Item Name</label>
-                                <div class="col-md-8">
+                                <div class="col-md-3">
                                     <input class="form-control" id="title" type="text" name="name"
                                            placeholder="clothes">
                                 </div>
@@ -29,13 +29,8 @@
                                     <input class="form-control" id="email-input" type="file" name="image"
                                            placeholder="upload images..">
                                 </div>
-
-                                <label class="col-md-2 col-form-label" for="fees">Price</label>
-                                <div class="col-md-3">
-                                    <input class="form-control" id="email-input" type="number" name="price"
-                                           placeholder="Eg. 450\-">
-                                </div>
                             </div>
+                                
 
                             <div class="form-group row">
                                 <label class="col-md-2 col-form-label" for="duration">Category</label>
@@ -49,17 +44,37 @@
                                         <option value="sports">Sports</option>
                                     </select>
                                 </div>
+
+                                <label class="col-md-2 col-form-label" for="sub_category">Sub Category</label>
+                                <div class="col-md-3">
+                                    <input class="form-control" id="email-input" type="text" name="sub_category"
+                                           placeholder="Eg: shirt, jeans">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                
+                                <label class="col-md-2 col-form-label" for="fees">Price</label>
+                                <div class="col-md-3">
+                                    <input class="form-control" id="email-input" type="number" name="price"
+                                           placeholder="Eg. 450\-">
+                                </div>
+
                                 <label class="col-md-2 col-form-label" for="size">Size</label>
                                 <div class="col-md-3">
                                     <input class="form-control" id="email-input" type="text" name="size"
                                            placeholder="Eg:- M, L, XL">
                                 </div>
 
+                            </div>
+
+                            <div class="form-group row">
                                 <label class="col-md-2 col-form-label" for="color">Color</label>
                                 <div class="col-md-3">
                                     <input class="form-control" id="email-input" type="text" name="color"
                                            placeholder="Eg:- red, Green">
                                 </div>
+
 
                                 <label class="col-md-2 col-form-label" for="size">Description</label>
                                 <div class="col-md-3">
@@ -67,13 +82,16 @@
                                            placeholder="Eg:- Describe about the product">
                                 </div>
 
-                                <label class="col-md-2 col-form-label" for="size">Model</label>
+                            </div>
+
+
+                           <div class="form-group row">
+                            <label class="col-md-2 col-form-label" for="size">Model</label>
                                 <div class="col-md-3">
                                     <input class="form-control" id="email-input" type="text" name="model"
                                            placeholder="">
                                 </div>
-
-                                <label class="col-md-2 col-form-label" for="duration">Vendor</label>
+                                {{-- <label class="col-md-2 col-form-label" for="duration">Vendor</label>
                                 <div class="col-md-3">
                                     <select class="form-control" id="duration" name="vendor_id">
                                         <option selected disabled>select Vendor</option>
@@ -81,10 +99,13 @@
                                             <option value="{{$vendor->id}}">{{$vendor->name}}</option>
                                         @endforeach
                                     </select>
-                                </div>
+                                </div> --}}
 
                             </div>
-
+                           
+                            @auth
+                            <input type="hidden" name="vendor_id" value="{{auth()->user()->id}}">
+                            @endauth
                             <button id="rizz" class="btn btn-md btn-primary" type="submit" style="float: right">
                                 <i class="fa fa-dot-circle-o"></i> Submit
                             </button>
@@ -101,7 +122,7 @@
 
 @endsection
 
-@section('js')
+{{-- @section('js')
     <script>
         $('#eventCreateForm').validate({
             rules:{
@@ -175,4 +196,4 @@
 
     </script>
 
-@endsection
+@endsection --}}
