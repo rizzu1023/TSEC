@@ -2,15 +2,18 @@
     <nav class="sidebar-nav">
         <ul class="nav">
 
-            {{--            <li class="nav-title">Theme</li>--}}
+            @if(Auth()->user()->isAdmin == '1')
             <li class="nav-item">
                 <a class="nav-link" href="/admin/dashboard">
                     <i class="nav-icon icon-drop"></i> Dashboard</a>
             </li>
+            @endif
+            @if(Auth()->user()->Vendor->isVendor == '1')
             <li class="nav-item">
                 <a class="nav-link" href="/admin/item">
                     <i class="nav-icon icon-drop"></i>Item</a>
             </li>
+            @endif
 
 {{--            <li class="nav-item">--}}
 {{--                <a class="nav-link" href="#">--}}

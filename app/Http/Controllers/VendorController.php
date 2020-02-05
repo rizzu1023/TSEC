@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use App\Vendor;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class VendorController extends Controller
 {
@@ -14,7 +16,6 @@ class VendorController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**
@@ -24,18 +25,43 @@ class VendorController extends Controller
      */
     public function create()
     {
-        //
+        $user = User::first();
+        return $user->Vendor->document;
     }
 
     /**
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return string
      */
     public function store(Request $request)
     {
-        //
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
+
+        if($request->hasFile('document')){
+            $fileNameWithExt = $request->file('document')->getClientOriginalName();
+                $fileName = pathinfo($fileNameWithExt, PATHINFO_FILENAME);
+                $extension =$request->file('document')->getClientOriginalExtension();
+                $fileNameToStore = $fileName.'_'.time().'.'.$extension;
+                $path = $request->file('document')->storeAs('public/vendor/documents',$fileNameToStore);
+        }
+        else{
+            $fileNameToStore = 'noimage.jpg';
+        }
+
+        $vendor = new Vendor;
+        $vendor->user_id = $user->id;
+        $vendor->mobile_no = $request->mobile_no;
+        $vendor->document = $fileNameToStore;
+        $vendor->address = $request->address;
+        $vendor->pincode = $request->pincode;
+
+        return "success";
     }
 
     /**
@@ -44,9 +70,10 @@ class VendorController extends Controller
      * @param  \App\Vendor  $vendor
      * @return \Illuminate\Http\Response
      */
-    public function show(Vendor $vendor)
+    public function show($id)
     {
-        //
+        $vendor = Vendor::where('id', $id)->first();
+        return view('Admin.Vendor.show',compact('vendor'));
     }
 
     /**

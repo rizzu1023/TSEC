@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use App\User;
+use App\Vendor;
 use Closure;
 
 class VendorMiddleware
@@ -17,12 +18,13 @@ class VendorMiddleware
     public function handle($request, Closure $next)
     {
         if(auth()->user()){
-            $user = User::where('id',auth()->user()->id)->where('isVendor', 1)->first();
+            $vendor_id = auth()->user()->Vendor->id;
+            $user = Vendor::where('id',$vendor_id)->where('isVendor', 1)->first();
             if($user)
                 return $next($request);
-            else{
-                dd('you are not a vendor');
-            }
+//            else{
+//                dd('you are not a vendor');
+//            }
         }
         else{
             dd('Login first');

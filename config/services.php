@@ -31,8 +31,13 @@ return [
     ],
 
     'facebook' => [
+<<<<<<< HEAD
         'client_id' => '',
         'client_secret' => 'aefc810b703c8f6d69facde3312c3244',
+=======
+        'client_id' => '1438335089670656',
+        'client_secret' => 'c98f095300f769bc6efdfaa338c523e8',
+>>>>>>> 5bc31c573272b14bf51bbfb8ac575833a3f5ed7f
         'redirect' => 'http://localhost:8000/login/facebook/callback',
     ],
 
