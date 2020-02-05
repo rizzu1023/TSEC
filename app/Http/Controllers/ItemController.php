@@ -47,6 +47,12 @@ class ItemController extends Controller
             'description' => $request->description,
             'sub_category' => $request->sub_category,
             'vendor_id' => $request->vendor_id,
+            'brand' => $request->brand,
+            'model_no' => $request->model_no,
+            'height'=> $request->height,
+            'weight' => $request->weight,
+            'width' => $request->width,
+            'warranty' => $request->warranty,
             'model' => $request->model,
         ]);
         

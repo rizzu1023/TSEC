@@ -11,7 +11,7 @@
 |
 */
 
-use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
@@ -30,7 +30,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function(){
     Route::post('/user/{id}/vendor/remove','AdminController@vendorRemove');
 
     Route::resource('/item','ItemController')->middleware('vendor');
+
+    Route::resource('/offer','OfferController');
     
 });
 
-//Route::get('admin/dashboard','AdminController@dashboard');

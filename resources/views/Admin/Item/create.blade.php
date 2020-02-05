@@ -102,6 +102,54 @@
                                 </div> --}}
 
                             </div>
+
+                            <div class="form-group row">
+                                <label class="col-md-2 col-form-label" for="brand">Brand</label>
+                                <div class="col-md-3">
+                                    <input class="form-control" id="email-input" type="text" name="brand"
+                                           placeholder="Eg:- HRX">
+                                </div>
+
+                                <label class="col-md-2 col-form-label" for="size">Model No</label>
+                                <div class="col-md-3">
+                                    <input class="form-control" id="email-input" type="text" name="model_no"
+                                           placeholder="Eg:-425 ">
+                                </div>
+                            
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-md-2 col-form-label" for="height">Height</label>
+                                <div class="col-md-3">
+                                    <input class="form-control" id="email-input" type="text" name="height"
+                                           placeholder="Eg:- 80cm">
+                                </div>
+
+                                <label class="col-md-2 col-form-label" for="weight">Weight </label>
+                                <div class="col-md-3">
+                                    <input class="form-control" id="email-input" type="text" name="weight"
+                                           placeholder="Eg:-45kg ">
+                                </div>
+                            
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-md-2 col-form-label" for="width">Width</label>
+                                <div class="col-md-3">
+                                    <input class="form-control" id="email-input" type="text" name="width"
+                                           placeholder="Eg:-10">
+                                </div>
+
+                                <label class="col-md-2 col-form-label" for="weight">Warranty</label>
+                                <div class="col-md-3">
+                                    <input class="form-control" id="email-input" type="text" name="warranty"
+                                           placeholder="Eg:- 1 year ">
+                                </div>
+                            
+                            </div>
+
+                            
+
                            
                             @auth
                             <input type="hidden" name="vendor_id" value="{{auth()->user()->id}}">

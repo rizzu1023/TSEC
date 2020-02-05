@@ -45,8 +45,8 @@
                                     <td>{{ $item->model }}</td>
                                     <td>{{ $item->vendor_id }}</td>
                                     <td>
-                                        {{-- <a class="btn btn-sm btn-square btn-primary" href="/admin/event/{{$event->id}}">Detail</a> --}}
-{{--                                        <a class="btn btn-sm btn-square btn-warning"--}}
+                                         <a class="btn btn-sm btn-square btn-primary" href="/admin/item/{{$item->id}}">Detail</a>
+{{--                                        {{--<a class="btn btn-sm btn-square btn-warning"--}}
 {{--                                           href="/admin/event/{{$event->id}}/edit">Edit</a>--}}
                                         <form method="post" action="/admin/item/{{ $item->id }}"
                                               style="display: inline-block">

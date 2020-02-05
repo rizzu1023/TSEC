@@ -24,6 +24,13 @@ class CreateItemsTable extends Migration
             $table->string('color')->nullable();
             $table->string('description');
             $table->string('sub_category');
+            $table->boolean('availabe')->default(1);
+            $table->string('brand');
+            $table->string('model_no');
+            $table->string('height')->nullable();
+            $table->string('weight')->nullable();
+            $table->string('width')->nullable();
+            $table->string('warranty');
             $table->string('model')->nullable();
             $table->integer('vendor_id');
             $table->timestamps();
