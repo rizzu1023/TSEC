@@ -137,20 +137,7 @@
 
 {{--                            </td>--}}
 {{--                        </tr>--}}
-                        <tr class="bottom_button">
-                            <td>
-                                <!-- <a class="btn_1" href="#">Update Cart</a> -->
-                            </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
 
-                            <td>
-                                <div class="cupon_text float-right">
-                                    <a class="btn_1" href="#">Update Cart</a>
-                                </div>
-                            </td>
-                        </tr>
                         <tr class="shipping_area">
                             <td></td>
                             <td></td>
@@ -202,11 +189,81 @@
                     </table>
                     <div class="checkout_btn_inner float-right">
                         <a class="btn_1" href="index.html">Continue Shopping</a>
-                        <a class="btn_1 checkout_btn_1" href="#">Proceed to checkout</a>
+                        <button type="submit" class="btn_1 btn checkout_btn_1" data-toggle="modal" data-target="#exampleModal">Proceed to checkout</button>
                     </div>
                 </div>
             </div>
     </section>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <form method="post" action="{{ url('/pay') }}" name="laravel_instamojo">
+                    @csrf
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Order Detail</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Buyer Name</span>
+                        </div>
+                        <input type="text" class="form-control"  name="buyer_name"  value="{{auth()->user()->name}}" readonly=""/>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Mobile Number</span>
+                        </div>
+                        <input readonly="" type="text" class="form-control"  name="mobile_no" aria-label="Username" aria-describedby="basic-addon1" value="{{auth()->user()->Customer->mobile_no}}"/>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Address</span>
+                        </div>
+                        <input readonly="" type="text" class="form-control" name="address" aria-label="Username" aria-describedby="basic-addon1" value="{{auth()->user()->Customer->address}}"/>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Email</span>
+                        </div>
+                        <input readonly="" type="text" class="form-control"  name="email" aria-label="Username" aria-describedby="basic-addon1" value="{{auth()->user()->email}}"/>
+                    </div>
+
+
+{{--                @foreach($items as $item)--}}
+{{--                    <div class="input-group mb-3">--}}
+{{--                        <div class="input-group-prepend">--}}
+{{--                            <span class="input-group-text" id="basic-addon1">Product Name</span>--}}
+{{--                        </div>--}}
+{{--                        <span type="text" class="form-control"  aria-label="Username" aria-describedby="basic-addon1">{{$item->name}} <p style="display: inline-block;float: right">&nbsp;&nbsp;&#8377 {{$item->price}}</p></span>--}}
+{{--                    </div>--}}
+{{--                    @endforeach--}}
+
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Total</span>
+                        </div>
+                        <input readonly="" type="text" class="form-control"  name="amount" value="{{$total_price}}" aria-label="Username" aria-describedby="basic-addon1"/>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+
+                    <button type="button" class="btn_1 btn checkout_btn_1"  data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn_1 btn checkout_btn_1">Order Now</button>
+
+                </div>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
 
 
 @endsection

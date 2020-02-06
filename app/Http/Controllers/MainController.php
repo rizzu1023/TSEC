@@ -23,7 +23,8 @@ class MainController extends Controller
         $items = Item::whereHas('User',function($query) use($id){
             $query->where('user_id', $id);
         })->get();
-        return view('Main.cart',compact('items'));
+        $total_price = $items->sum('price');
+        return view('Main.cart',compact('items','total_price'));
     }
 
     public function vendor(){

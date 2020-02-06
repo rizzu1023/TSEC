@@ -33,13 +33,13 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function(){
     Route::resource('/item','ItemController')->middleware('vendor');
 });
 
-Route::get('checkout','PayController@checkout');
-Route::post('pay','PayController@pay');
-Route::get('pay-success', 'PayController@success');
+Route::get('/checkout','PayController@checkout');
+Route::post('/pay','PayController@pay');
+Route::get('/pay-success', 'PayController@success');
 
 Route::resource('/offer','OfferController');
 
-Route::get('/', 'MainController@index')->name('index');
+Route::get('/', 'MainController@index')->name('Main.index');
 Route::get('/cart','MainController@cart')->middleware('auth');
 Route::post('/cart','CartController@store')->middleware('auth');
 Route::delete('/cart/{id}','CartController@destroy')->middleware('auth');
