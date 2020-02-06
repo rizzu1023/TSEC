@@ -7,16 +7,13 @@ use App\Item;
 use App\Search;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MainController extends Controller
 {
     public function index(){
         $items = Item::all();
-        $max_search = Search::where('customer_id',auth()->user()->id)->get();
-        $data = $max_search->countBy('search_text');
-        return collect($data);
-//        $recommends = Item::where('category',$)
-        return view('Main.index',compact('items','recommends'));
+        return view('Main.index',compact('items'));
     }
 
     public function cart(){
@@ -64,15 +61,22 @@ class MainController extends Controller
     public function singleProduct($id){
         $item = Item::where('id',$id)->first();
         if(auth()) {
-            $search = new Search;
-            $search->search_text = $item->category;
-            $search->customer_id = auth()->user()->id;
-            $search->save();
+            if($search = Search::where('search_text',$item->category)->first()){
+                $search->count = $search->count + 1;
+                $search->save();
+            }
+            else {
+                $search = new Search;
+                $search->search_text = $item->category;
+                $search->customer_id = auth()->user()->id;
+                $search->count = 1;
+                $search->save();
+            }
 
-            $search = new Search;
-            $search->search_text = $item->sub_category;
-            $search->customer_id = auth()->user()->id;
-            $search->save();
+//            $search = new Search;
+//            $search->search_text = $item->sub_category;
+//            $search->customer_id = auth()->user()->id;
+//            $search->save();
         }
         return view('Main.single-product',compact('item'));
     }
@@ -88,7 +92,9 @@ class MainController extends Controller
     }
 
     public function recommend(){
-        $items = Item::all();
+        $max_search = Search::select('search_text')->where('customer_id',auth()->user()->id)->orderBy('count','desc')->take(2)->get();
+//        return $max_search['0']->search_text;
+        $items = Item::where('category',$max_search['0']->search_text)->orWhere('category',$max_search['1']->search_text)->get();
         return view('Main.category',compact('items'));
     }
 }
