@@ -7413,12 +7413,7 @@ h6 {
 }
 
 /* line 1, ../../01 cl html template/03_jun 2019/188_Aranoz shop_html/sass/_breadcrumb.scss */
-.breadcrumb_bg {
-  background-image: url("../img/breadcrumb.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+
 
 /* line 5, ../../01 cl html template/03_jun 2019/188_Aranoz shop_html/sass/_breadcrumb.scss */
 .breadcrumb {
@@ -7799,3 +7794,28 @@ h6 {
   margin-top: 26px;
   margin-left: 60px;
 }
+
+
+.contactimg {
+  background-image: url("../img/contact.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.order
+{
+  background-image: url("../img/order.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login
+{
+  background-image: url("../img/register.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
