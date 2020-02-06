@@ -68,7 +68,6 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
                                 <a class="dropdown-item" href="/account"> Account Info</a>
                                 <a class="dropdown-item" href="/order">Orders</a>
-                                <a class="dropdown-item" href="checkout.html">Your Recommendation</a>
                                 <a class="dropdown-item" href="/cart">Shopping Cart</a>
                                 <a class="dropdown-item" href="/confirmation">confirmation</a>
                                 @auth

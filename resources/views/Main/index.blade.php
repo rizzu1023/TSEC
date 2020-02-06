@@ -12,16 +12,16 @@
                                 <div class="col-lg-5 col-md-8">
                                     <div class="banner_text">
                                         <div class="banner_text_iner">
-                                            <h1>Wood & Cloth
-                                                Sofa</h1>
+                                            <h1>Fashion trends
+                                            
                                             <p>Incididunt ut labore et dolore magna aliqua quis ipsum
                                                 suspendisse ultrices gravida. Risus commodo viverra</p>
-                                            <a href="#" class="btn_2">buy now</a>
+                                            <a href="/product/fashion" class="btn_2">buy now</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="banner_img d-none d-lg-block">
-                                    <img src="{{asset('Main/img/banner_img.png')}}" alt="">
+                                    <img src="{{asset('Main/img/bg.jpg')}}" alt="">
                                 </div>
                             </div>
                         </div><div class="single_banner_slider">
@@ -33,24 +33,7 @@
                                                 Sofa</h1>
                                             <p>Incididunt ut labore et dolore magna aliqua quis ipsum
                                                 suspendisse ultrices gravida. Risus commodo viverra</p>
-                                            <a href="#" class="btn_2">buy now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="banner_img d-none d-lg-block">
-                                    <img src="{{asset('Main/img/banner_img.png')}}" alt="">
-                                </div>
-                            </div>
-                        </div><div class="single_banner_slider">
-                            <div class="row">
-                                <div class="col-lg-5 col-md-8">
-                                    <div class="banner_text">
-                                        <div class="banner_text_iner">
-                                            <h1>Wood & Cloth
-                                                Sofa</h1>
-                                            <p>Incididunt ut labore et dolore magna aliqua quis ipsum
-                                                suspendisse ultrices gravida. Risus commodo viverra</p>
-                                            <a href="#" class="btn_2">buy now</a>
+                                            <a href="/product/furniture" class="btn_2">buy now</a>
                                         </div>
                                     </div>
                                 </div>
@@ -59,23 +42,7 @@
                                 </div>
                             </div>
                         </div>
-                    <!-- <div class="single_banner_slider">
-                            <div class="row">
-                                <div class="col-lg-5 col-md-8">
-                                    <div class="banner_text">
-                                        <div class="banner_text_iner">
-                                            <h1>Cloth $ Wood Sofa</h1>
-                                            <p>Incididunt ut labore et dolore magna aliqua quis ipsum
-                                                suspendisse ultrices gravida. Risus commodo viverra</p>
-                                            <a href="#" class="btn_2">buy now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="banner_img d-none d-lg-block">
-                                    <img src="{{asset('Main/img/banner_img.png')}}" alt="">
-                                </div>
-                            </div>
-                        </div> -->
+                       
                     </div>
 
                 </div>
@@ -282,7 +249,7 @@
     </section>
 
     <!-- feature_part start-->
-    <section class="feature_part padding_top">
+    <section class="feature_part">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
@@ -296,7 +263,7 @@
                     <div class="single_feature_post_text">
                         <h3>Electronics</h3>
                         <p>latest Electronics products</p>
-                        <a href="#" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
+                        <a href="/product/electronics" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
                         <img src="{{asset('Main/img/feature/feature_1.jpg')}}" alt="">
                     </div>
                 </div>
@@ -304,7 +271,7 @@
                     <div class="single_feature_post_text">
                         <h3>Fashion</p>
                             <p>Latest Fashion</p>
-                            <a href="#" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
+                            <a href="/product/fashion" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
                             <img src="{{asset('Main/img/feature/333.png')}}" alt="">
                     </div>
                 </div>
@@ -312,16 +279,16 @@
                     <div class="single_feature_post_text">
                         <h3>Sports</h3>
                         <p>Latest Sports</p>
-                        <a href="#" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
-                        <img src="{{asset('Main/img/feature/feature_3.jpg')}}" alt="">
+                        <a href="/product/sports" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
+                        <img src="{{asset('Main/img/feature/sports.png')}}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-7 col-sm-6">
                     <div class="single_feature_post_text">
                         <h3>Furnitures</h3>
                         <p></p>Latest in Furnitures</h3>
-                        <a href="#" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
-                        <img src="{{asset('Main/img/feature/feature_4.jpg')}}" alt="">
+                        <a href="/product/furniture" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
+                        <img src="{{asset('Main/img/feature/feature_4.png')}}" alt="">
                     </div>
                 </div>
             </div>
@@ -425,7 +392,7 @@
     <!--::subscribe_area part end::-->
 
     <!-- subscribe_area part start-->
-    <section class="client_logo padding_top">
+    <section class="client_logo">
         <div class="container">
             <div class="row align-items-center">
                 <div class="section_tittle text-center">
