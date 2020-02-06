@@ -28,7 +28,7 @@
                             <h2>New to our Shop?</h2>
                             <p>There are advances being made in science and technology
                                 everyday, and a good example of this is the</p>
-                            <a href="customersignup.html" class="btn_3">Create an Account</a>
+                            <a href="/customer/register" class="btn_3">Create an Account</a>
                             <a href="/login/facebook" style="font-size: smaller;" class="btn_3">
                                 <i style="padding-right: 5px;" class="fab fa-facebook-f"></i>Sign up with
                                 Facebook</a><br><br>

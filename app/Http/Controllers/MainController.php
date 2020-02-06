@@ -23,7 +23,8 @@ class MainController extends Controller
         $items = Item::whereHas('User',function($query) use($id){
             $query->where('user_id', $id);
         })->get();
-        return view('Main.cart',compact('items'));
+        $total_price = $items->sum('price');
+        return view('Main.cart',compact('items','total_price'));
     }
 
     public function vendor(){
@@ -44,5 +45,29 @@ class MainController extends Controller
 
     public function confirmation(){
         return view('Main.confirmation');
+    }
+
+    public function contact(){
+        return view('Main.contact');
+    }
+
+    public function product($category){
+        $items = Item::where('category',$category)->get();
+        return view('Main.category',compact('items'));
+    }
+
+    public function singleProduct($id){
+        $item = Item::where('id',$id)->first();
+        return view('Main.single-product',compact('item'));
+    }
+
+    public function productByBrand($category, $brand){
+        $items = Item::where('brand',$brand)->get();
+        return view('Main.category',compact('items'));
+    }
+
+    public function productByPrice($price){
+        $items = Item::where('price','>',$price)->get();
+        return view('Main.category',compact('items'));
     }
 }

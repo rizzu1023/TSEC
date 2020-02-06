@@ -4,7 +4,7 @@
             <div class="col-lg-12">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <a class="logo navbar-brand" href="index.html"> <img style="height:30px;max-width:100%;"
-                                                                         src="img/logo.svg" alt="logo"> </a>
+                                                                         src="{{asset('Main/img/logo.svg')}}" alt="logo"> </a>
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -23,11 +23,11 @@
                                     Shop
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown_1">
-                                    <a class="dropdown-item" href="category.html"> Electronics</a>
-                                    <a class="dropdown-item" href="catogery.html">Fashion</a>
-                                    <a class="dropdown-item" href="catogery.html">Sports</a>
-                                    <a class="dropdown-item" href="catogery.html">Furnitures</a>
-                                    <a class="dropdown-item" href="catogery.html">Books</a>
+                                    <a class="dropdown-item" href="/product/electronics">Electronics</a>
+                                    <a class="dropdown-item" href="/product/fashion">Fashion</a>
+                                    <a class="dropdown-item" href="/product/sports">Sports</a>
+                                    <a class="dropdown-item" href="/product/furniture">Furnitures</a>
+                                    <a class="dropdown-item" href="/product/books">Books</a>
 
                                 </div>
                             </li>
@@ -38,7 +38,7 @@
 
 
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contact us</a>
+                                <a class="nav-link" href="/contact">Contact us</a>
                             </li>
 
                             @auth
@@ -68,7 +68,6 @@
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
                                 <a class="dropdown-item" href="/account"> Account Info</a>
                                 <a class="dropdown-item" href="/order">Orders</a>
-                                <a class="dropdown-item" href="checkout.html">Your Recommendation</a>
                                 <a class="dropdown-item" href="/cart">Shopping Cart</a>
                                 <a class="dropdown-item" href="/confirmation">confirmation</a>
                                 @auth
@@ -100,4 +99,16 @@
             </form>
         </div>
     </div>
+
+
+    @if(session()->has('message'))
+    <div class="search_input" id="search_input_box">
+        <div class="container ">
+            <form class="d-flex justify-content-between search-inner">
+                <p>{{ session()->get('message') }}</p>
+                <span class="ti-close" id="close_search" title="Close Search"></span>
+            </form>
+        </div>
+    </div>
+    @endif
 </header>

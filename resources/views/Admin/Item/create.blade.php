@@ -30,7 +30,7 @@
                                            placeholder="upload images..">
                                 </div>
                             </div>
-                                
+
 
                             <div class="form-group row">
                                 <label class="col-md-2 col-form-label" for="duration">Category</label>
@@ -38,8 +38,8 @@
                                     <select class="form-control" id="duration" name="category">
                                         <option selected disabled>select category</option>
                                         <option value="books">Books</option>
-                                        <option value="clothing">Clothing</option>
-                                        <option value="electronic">Electronic</option>
+                                        <option value="fashion">Fashion</option>
+                                        <option value="electronics">Electronics</option>
                                         <option value="furniture">Furniture</option>
                                         <option value="sports">Sports</option>
                                     </select>
@@ -53,7 +53,7 @@
                             </div>
 
                             <div class="form-group row">
-                                
+
                                 <label class="col-md-2 col-form-label" for="fees">Price</label>
                                 <div class="col-md-3">
                                     <input class="form-control" id="email-input" type="number" name="price"
@@ -115,7 +115,7 @@
                                     <input class="form-control" id="email-input" type="text" name="model_no"
                                            placeholder="Eg:-425 ">
                                 </div>
-                            
+
                             </div>
 
                             <div class="form-group row">
@@ -130,7 +130,7 @@
                                     <input class="form-control" id="email-input" type="text" name="weight"
                                            placeholder="Eg:-45kg ">
                                 </div>
-                            
+
                             </div>
 
                             <div class="form-group row">
@@ -145,12 +145,12 @@
                                     <input class="form-control" id="email-input" type="text" name="warranty"
                                            placeholder="Eg:- 1 year ">
                                 </div>
-                            
+
                             </div>
 
-                            
 
-                           
+
+
                             @auth
                             <input type="hidden" name="vendor_id" value="{{auth()->user()->id}}">
                             @endauth
