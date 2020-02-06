@@ -14,7 +14,8 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        $orders = Order::where('vendor_id',auth()->user()->id)->get();
+        return  view('Admin.Order.index',compact('orders'));
     }
 
     /**

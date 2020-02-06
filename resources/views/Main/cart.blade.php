@@ -150,7 +150,7 @@
                                 <div class="shipping_box">
                                     <ul class="list">
                                         <li class="active">
-                                            <a>Shipping Charge: $2.00</a>
+                                            <a>Free Delivery</a>
                                         </li>
                                     </ul>
                                     <!-- <h6>
@@ -181,7 +181,7 @@
                                 <h5>Subtotal</h5>
                             </td>
                             <td>
-                                <h5>$2160.00</h5>
+                                <h5>&#8377 {{$total_price}}</h5>
                             </td>
                         </tr>
 
@@ -213,6 +213,7 @@
                             <span class="input-group-text" id="basic-addon1">Buyer Name</span>
                         </div>
                         <input type="text" class="form-control"  name="buyer_name"  value="{{auth()->user()->name}}" readonly=""/>
+                        <input type="hidden" name="buyer_id" value="{{auth()->user()->id}}"/>
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
@@ -234,21 +235,23 @@
                     </div>
 
 
-{{--                @foreach($items as $item)--}}
-{{--                    <div class="input-group mb-3">--}}
-{{--                        <div class="input-group-prepend">--}}
-{{--                            <span class="input-group-text" id="basic-addon1">Product Name</span>--}}
-{{--                        </div>--}}
-{{--                        <span type="text" class="form-control"  aria-label="Username" aria-describedby="basic-addon1">{{$item->name}} <p style="display: inline-block;float: right">&nbsp;&nbsp;&#8377 {{$item->price}}</p></span>--}}
-{{--                    </div>--}}
-{{--                    @endforeach--}}
+                @foreach($items as $item)
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Product Name</span>
+                        </div>
+                        <input type="text" class="form-control" name="item_name" value="{{$item->name}}" aria-label="Username" aria-describedby="basic-addon1" value="{{$item->name}}"> <p style="display: inline-block;float: right">&nbsp;&nbsp;&#8377 {{$item->price}}</p>/>
+                        <input type="hidden" class="form-control" name="price" value="{{$item->price}}"/>
+                        <input type="hidden" class="form-control" name="vendor_id" value="{{$item->vendor_id}}"/>
+                        <input type="hidden" class="form-control" name="item_id" value="{{$item->id}}"/>
+                    </div>
+                    @endforeach
 
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1">Total</span>
                         </div>
                         <input readonly="" type="text" class="form-control"  name="amount" value="{{$total_price}}" aria-label="Username" aria-describedby="basic-addon1"/>
-
                     </div>
 
                 </div>

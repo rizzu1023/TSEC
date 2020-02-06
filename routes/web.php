@@ -30,6 +30,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function(){
     Route::post('/user/{id}/vendor/remove','AdminController@vendorRemove');
     Route::get('vendor/{id}','VendorController@show')->name('vendor.show');
 
+    Route::resource('/order','OrderController');
+
     Route::resource('/item','ItemController')->middleware('vendor');
 });
 
