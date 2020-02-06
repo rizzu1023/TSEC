@@ -1,7 +1,7 @@
 @extends('Main.layouts.base')
 
 @section('content')
-<section class="breadcrumb breadcrumb_bg">
+<section class="breadcrumb login">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-8">
