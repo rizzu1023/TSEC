@@ -33,7 +33,7 @@
                             </li>
 
                             <li class="nav-item">
-                                <a class="nav-link" href="category.html">Recommends</a>
+                                <a class="nav-link" href="/recommend">Recommends</a>
                             </li>
 
 

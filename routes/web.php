@@ -63,6 +63,7 @@ Route::get('/customer/register','AdminController@registerShow')->name('register.
 Route::post('/customer/register','AdminController@register')->name('register.store');
 
 Route::get('/location','GeoLocationController@location');
+Route::get('/recommend','MainController@recommend');
 
 
 
