@@ -21,7 +21,7 @@
                                     </div>
                                 </div>
                                 <div class="banner_img d-none d-lg-block">
-                                    <img src="{{asset('Main/img/bg.jpg')}}" alt="">
+                                    <img style="z-index=-9999"; src="{{asset('Main/img/cloth.png')}}" alt="">
                                 </div>
                             </div>
                         </div><div class="single_banner_slider">
