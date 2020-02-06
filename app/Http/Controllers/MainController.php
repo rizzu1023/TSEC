@@ -93,7 +93,6 @@ class MainController extends Controller
 
     public function recommend(){
         $max_search = Search::select('search_text')->where('customer_id',auth()->user()->id)->orderBy('count','desc')->take(2)->get();
-//        return $max_search['0']->search_text;
         $items = Item::where('category',$max_search['0']->search_text)->orWhere('category',$max_search['1']->search_text)->get();
         return view('Main.category',compact('items'));
     }
