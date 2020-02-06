@@ -7819,3 +7819,21 @@ h6 {
   background-size: cover;
 }
 
+.cart
+{
+  background-image: url("../img/cart.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.breadcrumb_bg
+{
+  background-image: url("../img/breadcrumb.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
