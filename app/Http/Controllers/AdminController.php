@@ -35,11 +35,11 @@ class AdminController extends Controller
     public function register(Request $request){
 
 //        return $request->all();
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|email|string|unique:users',
-            'password' => 'required|min:8|string',
-        ]);
+//        $request->validate([
+//            'name' => 'required',
+//            'email' => 'required|email|string|unique:users',
+//            'password' => 'required|min:8|string',
+//        ]);
 
         $user = User::create([
             'name' => $request->name,

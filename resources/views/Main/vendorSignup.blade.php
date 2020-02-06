@@ -70,8 +70,8 @@
                         <form class="row contact_form" action="{{ Route('vendor.store') }}" method="post" novalidate="novalidate" enctype="multipart/form-data">
                             @csrf
                             <div class="col-md-12 form-group p_star">
-                                <input type="text" class="form-control" id="first" name="name"/>
-                                <span class="placeholder" data-placeholder="Name"></span>
+                                <input type="text" class="form-control" id="first" name="name" placeholder="Name"/>
+{{--                                <span class="placeholder" ></span>--}}
                             </div>
 
 {{--                            <div class="col-md-12 form-group">--}}
@@ -79,12 +79,12 @@
 {{--                                       placeholder="Company name"/>--}}
 {{--                            </div>--}}
                             <div class="col-md-12 form-group p_star">
-                                <input type="text" class="form-control" id="number" name="mobile_no"/>
-                                <span class="placeholder" data-placeholder="Phone number"></span>
+                                <input type="text" class="form-control" id="number" name="mobile_no" placeholder="Phone number"/>
+{{--                                <span class="placeholder" ></span>--}}
                             </div>
                             <div class="col-md-12 form-group p_star">
-                                <input type="text" class="form-control" id="email" name="email"/>
-                                <span class="placeholder" data-placeholder="Email Address"></span>
+                                <input type="text" class="form-control" id="email" name="email"  placeholder="Email Address"/>
+{{--                                <span class="placeholder"></span>--}}
                             </div>
 {{--                            <div class="col-md-12 form-group p_star">--}}
 {{--                                <select class="country_select">--}}
@@ -94,8 +94,8 @@
 {{--                                </select>--}}
 {{--                            </div>--}}
                             <div class="col-md-12 form-group p_star">
-                                <input type="text" class="form-control" id="add1" name="address"/>
-                                <span class="placeholder" data-placeholder="Address"></span>
+                                <input type="text" class="form-control" id="add1" name="address" placeholder="Address"/>
+{{--                                <span class="placeholder" ></span>--}}
                             </div>
 {{--                            <div class="col-md-12 form-group p_star">--}}
 {{--                                <input type="text" class="form-control" id="add2" name="add2"/>--}}
@@ -114,6 +114,10 @@
 {{--                            </div>--}}
                             <div class="col-md-12 form-group">
                                 <input type="text" class="form-control" id="zip" name="pincode" placeholder="Postcode/ZIP"/>
+                            </div>
+                            <div class="col-md-12 form-group p_star">
+                                <input type="password" class="form-control" id="add1" name="password" placeholder="Password"/>
+                                {{--                                <span class="placeholder" ></span>--}}
                             </div>
                             <div class="col-md-12 form-group">
                                 <input type="file" name="document" accept="application/pdf,application/vnd.ms-excel" />
