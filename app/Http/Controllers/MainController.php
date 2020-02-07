@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Cart;
 use App\Item;
+use App\Order;
 use App\Search;
 use App\User;
 use Illuminate\Http\Request;
@@ -38,7 +39,8 @@ class MainController extends Controller
     }
 
     public function order(){
-        return view('Main.orders');
+        $orders = Order::where('buyer_name',auth()->user()->name)->get();
+        return view('Main.orders',compact('orders'));
     }
 
     public function account(){
@@ -66,6 +68,7 @@ class MainController extends Controller
                 $search->save();
             }
             else {
+
                 $search = new Search;
                 $search->search_text = $item->category;
                 $search->customer_id = auth()->user()->id;
@@ -96,4 +99,6 @@ class MainController extends Controller
         $items = Item::where('category',$max_search['0']->search_text)->orWhere('category',$max_search['1']->search_text)->get();
         return view('Main.category',compact('items'));
     }
+
+
 }

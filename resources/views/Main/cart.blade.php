@@ -240,7 +240,7 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1">Product Name</span>
                         </div>
-                        <input type="text" class="form-control" name="item_name" value="{{$item->name}}" aria-label="Username" aria-describedby="basic-addon1" value="{{$item->name}}"> <p style="display: inline-block;float: right">&nbsp;&nbsp;&#8377 {{$item->price}}</p>/>
+                        <input readonly="" type="text" class="form-control" name="item_name" value="{{$item->name}}" aria-label="Username" aria-describedby="basic-addon1" value="{{$item->name}}"> <p style="display: inline-block;float: right">&nbsp;&nbsp;&#8377 {{$item->price}}</p>
                         <input type="hidden" class="form-control" name="price" value="{{$item->price}}"/>
                         <input type="hidden" class="form-control" name="vendor_id" value="{{$item->vendor_id}}"/>
                         <input type="hidden" class="form-control" name="item_id" value="{{$item->id}}"/>

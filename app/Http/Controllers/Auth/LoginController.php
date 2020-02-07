@@ -50,7 +50,7 @@ class LoginController extends Controller
 
         if (Auth::attempt($credentials)) {
             // Authentication passed...
-            return redirect()->intended('Main.index');
+            return redirect::route('Main.index')->with('message','Succesfully Logged In!');
         }
         else
             return redirect::back()->message('message','Email Or Password Incorrect!');
@@ -71,7 +71,7 @@ class LoginController extends Controller
         $findUser = User::where('email', $facebook->email)->first();
         if($findUser){
             Auth::login($findUser);
-            return redirect::route('index')->with('message','Successfully Logged in');
+            return redirect::route('Main.index')->with('message','Successfully Logged in');
         }
         else{
             $user = New User;
@@ -80,7 +80,7 @@ class LoginController extends Controller
             $user->password = bcrypt(123456);
             $user->save();
             Auth::login($user);
-            return redirect::route('index')->with('message','Successfully Logged in');
+            return redirect::route('Main.index')->with('message','Successfully Logged in');
         }
     }
 

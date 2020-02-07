@@ -25,7 +25,7 @@ class PayController extends Controller
 
         try {
             $response = $api->paymentRequestCreate(array(
-                "purpose" => "XYZ",
+                "purpose" => "shopAR",
                 "amount" => $request->amount,
                 "buyer_name" => "$request->buyer_name",
                 "send_email" => true,

@@ -60,8 +60,12 @@
 
                         <!-- <a href="#" class="like_us"> <i class="ti-heart"></i> </a> -->
                     </div>
+
                 </div>
+                <br><br>
+                <button style="display: inline; float: right;" class="btn btn-md btn_3">View in AR &nbsp;&nbsp;<i class="ti-eye"></i></button>
             </div>
+
         </div>
     </div>
 </div>

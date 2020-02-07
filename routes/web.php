@@ -56,7 +56,7 @@ Route::get('/confirmation','MainController@confirmation');
 Route::get('/contact','MainController@contact');
 Route::get('/product/{category}','MainController@product');
 Route::get('/product/price/{price}','MainController@productByPrice');
-Route::get('/product/single/{id}','MainController@singleProduct');
+Route::get('/product/single/{id}','MainController@singleProduct')->middleware('auth');
 Route::get('/product/{category}/{brand}','MainController@productByBrand');
 Route::get('/product/single/filter/{brand}','MainController@singleProductBrand');
 Route::get('/customer/register','AdminController@registerShow')->name('register.show');

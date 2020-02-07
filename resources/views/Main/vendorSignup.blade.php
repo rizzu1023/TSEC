@@ -120,6 +120,7 @@
                                 {{--                                <span class="placeholder" ></span>--}}
                             </div>
                             <div class="col-md-12 form-group">
+                                <span>Upload your Aadhar or Pan Card</span><br>
                                 <input type="file" name="document" accept="application/pdf,application/vnd.ms-excel" />
 {{--                                    <input class="form-control" id="email-input" type="file" name="image"--}}
 {{--                                           placeholder="upload Document">--}}

@@ -105,7 +105,7 @@
     <div class="search_input" id="search_input_box">
         <div class="container ">
             <form class="d-flex justify-content-between search-inner">
-                <p>{{ session()->get('message') }}</p>
+                <p style="color: white">{{ session()->get('message') }}</p>
                 <span class="ti-close" id="close_search" title="Close Search"></span>
             </form>
         </div>

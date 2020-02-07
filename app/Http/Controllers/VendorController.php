@@ -6,6 +6,7 @@ use App\User;
 use App\Vendor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Redirect;
 
 class VendorController extends Controller
 {
@@ -63,7 +64,7 @@ class VendorController extends Controller
         $vendor->pincode = $request->pincode;
         $vendor->save();
 
-        return "success";
+        return redirect::route('Main.index')->with('message','Your Request has been sent to our Legal Department');
     }
 
     /**
