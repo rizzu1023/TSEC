@@ -29,6 +29,7 @@
 <body>
     <!--::header part start::-->
     @include('Main.layouts.header')
+    
     <!-- Header part end-->
 
     <!-- banner part start-->
@@ -46,12 +47,12 @@
                                                 Sofa</h1>
                                             <p>Incididunt ut labore et dolore magna aliqua quis ipsum
                                                 suspendisse ultrices gravida. Risus commodo viverra</p>
-                                            <a href="{{asset('Main\#" class="btn_2">Start Shopping</a>
+                                            <a href="#" class="btn_2">Start Shopping</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="banner_img d-none d-lg-block">
-                                    <img src="{{asset('Main\img/bg.jpg')}}" alt="">
+                                    <img src="{{asset('Main\img\bg.jpg')}}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -82,12 +83,12 @@
                                                 Sofa</h1>
                                             <p>Incididunt ut labore et dolore magna aliqua quis ipsum
                                                 suspendisse ultrices gravida. Risus commodo viverra</p>
-                                            <a href="{{asset('Main\#" class="btn_2">buy now</a>
+                                            <a href="#" class="btn_2">buy now</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="banner_img d-none d-lg-block">
-                                    <img src="{{asset('Main\img/banner_img.png" alt="">
+                                    <img src="{{asset('Main\img\banner_img.png')}}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -104,7 +105,7 @@
                                     </div>
                                 </div>
                                 <div class="banner_img d-none d-lg-block">
-                                    <img src="{{asset('Main\img/banner_img.png" alt="">
+                                    <img src="{{asset('Main\img/banner_img.png')}}" alt="">
                                 </div>
                             </div>
                         </div> -->
@@ -132,7 +133,7 @@
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_1.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_1.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -142,7 +143,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_2.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_2.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -152,7 +153,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_3.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_3.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -162,7 +163,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_4.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_4.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -172,7 +173,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_5.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_5.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -182,7 +183,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_6.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_6.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -192,7 +193,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_7.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_7.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -202,7 +203,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_8.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_8.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -216,7 +217,7 @@
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_1.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_1.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -226,7 +227,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_2.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_2.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -236,7 +237,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_3.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_3.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -246,7 +247,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_4.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_4.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -256,7 +257,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_5.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_5.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -266,7 +267,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_6.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_6.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -276,7 +277,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_7.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_7.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -286,7 +287,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_8.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_8.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -318,7 +319,7 @@
                         <h3>Electronics</h3>
                         <p>latest Electronics products</p>
                         <a href="{{asset('Main\category.html" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
-                        <img src="{{asset('Main\img/feature/feature_1.png" alt="">
+                        <img src="{{asset('Main\img/feature/feature_1.png')}}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-5 col-sm-6">
@@ -326,7 +327,7 @@
                         <h3>Fashion</p>
                         <p>Latest Fashion</p>
                         <a href="{{asset('Main\category.html" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
-                        <img src="{{asset('Main\img/feature/333.png" alt="">
+                        <img src="{{asset('Main\img/feature/333.png')}}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-5 col-sm-6">
@@ -334,7 +335,7 @@
                         <h3>Sports</h3>
                         <p>Latest Sports</p>
                         <a href="{{asset('Main\category.html" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
-                        <img src="{{asset('Main\img/feature/sports.png" alt="">
+                        <img src="{{asset('Main\img/feature/sports.png')}}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-7 col-sm-6">
@@ -342,7 +343,7 @@
                         <h3>Furnitures</h3>
                         <p></p>Latest in Furnitures</h3>
                         <a href="{{asset('Main\category.html" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
-                        <img src="{{asset('Main\img/feature/feature_4.png" alt="">
+                        <img src="{{asset('Main\img/feature/feature_4.png')}}" alt="">
                     </div>
                 </div>
             </div>
@@ -360,7 +361,7 @@
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-6 col-md-6">
                     <div class="offer_img">
-                        <img src="{{asset('Main\img/offer_img.png" alt="">
+                        <img src="{{asset('Main\img/offer_img.png')}}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
@@ -403,35 +404,35 @@
                 <div class="col-lg-12">
                     <div class="best_product_slider owl-carousel">
                         <div class="single_product_item">
-                            <img src="{{asset('Main\img/product/product_1.png" alt="">
+                            <img src="{{asset('Main\img/product/product_1.png')}}" alt="">
                             <div class="single_product_text">
                                 <h4>Quartz Belt Watch</h4>
                                 <h3>$150.00</h3>
                             </div>
                         </div>
                         <div class="single_product_item">
-                            <img src="{{asset('Main\img/product/product_2.png" alt="">
+                            <img src="{{asset('Main\img/product/product_2.png')}}" alt="">
                             <div class="single_product_text">
                                 <h4>Quartz Belt Watch</h4>
                                 <h3>$150.00</h3>
                             </div>
                         </div>
                         <div class="single_product_item">
-                            <img src="{{asset('Main\img/product/product_3.png" alt="">
+                            <img src="{{asset('Main\img/product/product_3.png')}}" alt="">
                             <div class="single_product_text">
                                 <h4>Quartz Belt Watch</h4>
                                 <h3>$150.00</h3>
                             </div>
                         </div>
                         <div class="single_product_item">
-                            <img src="{{asset('Main\img/product/product_4.png" alt="">
+                            <img src="{{asset('Main\img/product/product_4.png')}}" alt="">
                             <div class="single_product_text">
                                 <h4>Quartz Belt Watch</h4>
                                 <h3>$150.00</h3>
                             </div>
                         </div>
                         <div class="single_product_item">
-                            <img src="{{asset('Main\img/product/product_5.png" alt="">
+                            <img src="{{asset('Main\img/product/product_5.png')}}" alt="">
                             <div class="single_product_text">
                                 <h4>Quartz Belt Watch</h4>
                                 <h3>$150.00</h3>
@@ -460,34 +461,34 @@
                 </div>
                 <div class="col-lg-12">
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_1.png" alt="">
+                        <img src="{{asset('Main\img/client_logo/client_logo_1.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_2.png" alt="">
+                        <img src="{{asset('Main\img/client_logo/client_logo_2.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_3.png" alt="">
+                        <img src="{{asset('Main\img/client_logo/client_logo_3.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_4.png" alt="">
+                        <img src="{{asset('Main\img/client_logo/client_logo_4.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_5.png" alt="">
+                        <img src="{{asset('Main\img/client_logo/client_logo_5.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_3.png" alt="">
+                        <img src="{{asset('Main\img/client_logo/client_logo_3.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_1.png" alt="">
+                        <img src="{{asset('Main\img/client_logo/client_logo_1.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_2.png" alt="">
+                        <img src="{{asset('Main\img/client_logo/client_logo_2.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_3.png" alt="">
+                        <img src="{{asset('Main\img/client_logo/client_logo_3.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_4.png" alt="">
+                        <img src="{{asset('Main\img/client_logo/client_logo_4.png')}}" alt="">
                     </div>
                 </div>
             </div>
