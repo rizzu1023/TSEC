@@ -34,6 +34,8 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function(){
 
     Route::resource('/item','ItemController');
     Route::resource('/cashier','CashierController');
+    Route::get('/customer','AdminController@customer');
+
 });
 
 Route::get('/checkout','PayController@checkout');
@@ -44,6 +46,7 @@ Route::get('/pay-success', 'PayController@success');
 
 Route::get('/', 'MainController@index')->name('Main.index');
 Route::get('/cart','MainController@cart')->middleware('auth');
+Route::get('/shop','MainController@shop');
 Route::post('/cart','CartController@store')->middleware('auth');
 Route::delete('/cart/{id}','CartController@destroy')->middleware('auth');
 Route::get('/login/show','MainController@login')->name('login.show');

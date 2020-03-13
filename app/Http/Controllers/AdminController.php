@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Customer;
+use App\Otp;
 use App\User;
 use App\Vendor;
 use Illuminate\Http\Request;
@@ -14,6 +15,11 @@ class AdminController extends Controller
     public function dashboard(){
         $vendors = Vendor::all();
         return view('Admin.index',compact('vendors'));
+    }
+
+    public function customer(){
+        $customers = Otp::where('cashier_id',auth()->user()->id)->get();
+        return view('Admin.Customer.index',compact('customers'));
     }
 
     public function vendor($id){

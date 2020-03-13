@@ -23,6 +23,16 @@
                             <i class="nav-icon icon-drop"></i>Cashiers</a>
                     </li>
             @endif
+            <li class="nav-item">
+                <a class="nav-link" href="/admin/customer">
+                    <i class="nav-icon icon-drop"></i>Customer</a>
+            </li>
+            <li class="nav-item">
+            <form action="{{ route('logout') }}" method="post">
+                @csrf
+                <button type="submit" class="btn-sm btn btn-block">Logout</button>
+            </form>
+            </li>
 
             {{--            <li class="nav-item">--}}
             {{--                <a class="nav-link" href="#">--}}

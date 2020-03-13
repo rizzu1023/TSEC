@@ -13,8 +13,25 @@ use Illuminate\Support\Facades\DB;
 class MainController extends Controller
 {
     public function index(){
-        $items = Item::all();
-        return view('Main.index',compact('items'));
+        $items = collect();
+        $total_price = 0;
+        if(!auth()) {
+//            dd('asdf');
+            $user = User::findOrFail(auth()->user()->id);
+            $id = $user->id;
+            $items = Item::whereHas('User',function($query) use($id){
+                $query->where('user_id', $id);
+            })->get();
+        $total_price = $items->sum('price');
+        }
+
+        $assign = NULL;
+        return view('Main.index',compact('items','total_price','assign'));
+    }
+
+    public function shop(){
+//        $items = Item::all();
+        return view('Main.shop');
     }
 
     public function cart(){

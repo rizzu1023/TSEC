@@ -52,7 +52,7 @@
                                     role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Shop
                                 </a>
-                                
+
                             </li> -->
                             <li class="nav-item">
                                 <a class="nav-link" href="index.html">Shop</a>
@@ -84,7 +84,7 @@
                                     <a class="dropdown-item" href="single-blog.html">Single blog</a>
                                 </div>
                             </li> -->
-                           
+
                             <li class="nav-item">
                                 <a class="nav-link" href="contact.html">Contact us</a>
                             </li>
@@ -96,7 +96,7 @@
                     </div>
 
                     <div class="hearer_icon d-flex">
-                          
+
                         <a style="padding-top: 10px;" href="cart.html"><i class="fa fa-cart-plus"></i></a>
 
 
@@ -104,7 +104,7 @@
                          <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown_3"
                              role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                              <i style="padding-top: 5px;" class="fas fa-user-circle"></i>
-                             
+
                          </a>
                          <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
                              <a class="dropdown-item" href="login.html"> Account Info</a>
@@ -159,15 +159,18 @@
     <div class="container">
       <div class="cart_inner">
         <div class="table-responsive">
-          <div class="cashcounter">
+            @if($assign)
+
+            <div class="cashcounter">
             <h2>Please Collect at Cash Counter</h2>
             <div id="counternumber">
-              <h1 class="number">4</h1>
+              <h1 class="number">{{$data->cashier_id}}</h1>
             </div>
           </div>
           <div class="otp">
-            <h4> Verification OTP : 1234 </h4>
+            <h4> Verification OTP : {{$data->otp}} </h4>
           </div>
+            @endif
           <table class="table">
             <thead>
               <tr>
@@ -180,102 +183,40 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>
-                  <div class="media">
-                    <div class="d-flex">
-                      <img src="{{asset('Main/img/product/single-product/cart-1.jpg')}}"  alt="" />
-                    </div>
-                    <div class="media-body">
-                      <p>Minimalistic shop for multipurpose use</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <h5>$360.00</h5>
-                </td>
-                <td>
-                  <div class="product_count">
-                    <span class="input-number-decrement"> <i class="ti-angle-down"></i></span>
-                    <input class="input-number" type="text" value="1" min="0" max="10">
-                    <span class="input-number-increment"> <i class="ti-angle-up"></i></span>
-                  </div>
-                </td>
-                <td>
-                  <h5>$720.00</h5>
-                </td>
-                <td>
-                  <i class="btn_3 small fas fa-trash-alt"></i>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="media">
-                    <div class="d-flex">
-                      <img src="{{asset('Main/img/product/single-product/cart-1.jpg')}}"  alt="" />
-                    </div>
-                    <div class="media-body">
-                      <p>Minimalistic shop for multipurpose use</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <h5>$360.00</h5>
-                </td>
-                <td>
-                  <div class="product_count">
-                    <!-- <input type="text" value="1" min="0" max="10" title="Quantity:"
-                      class="input-text qty input-number" />
-                    <button
-                      class="increase input-number-increment items-count" type="button">
-                      <i class="ti-angle-up"></i>
-                    </button>
-                    <button
-                      class="reduced input-number-decrement items-count" type="button">
-                      <i class="ti-angle-down"></i>
-                    </button> -->
-                    <span class="input-number-decrement"> <i class="ti-angle-down"></i></span>
-                    <input class="input-number" type="text" value="1" min="0" max="10">
-                    <span class="input-number-increment"> <i class="ti-angle-up"></i></span>
-                  </div>
-                </td>
-                <td>
-                  <h5>$720.00</h5>
-                </td>
-                <td>
-                  <i class="btn_3 small fas fa-trash-alt"></i>
-
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div class="media">
-                    <div class="d-flex">
-                      <img src="{{asset('Main/img/product/single-product/cart-1.jpg')}}"  alt="" />
-                    </div>
-                    <div class="media-body">
-                      <p>Minimalistic shop for multipurpose use</p>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <h5>$360.00</h5>
-                </td>
-                <td>
-                  <div class="product_count">
-                    <span class="input-number-decrement"> <i class="ti-angle-down"></i></span>
-                    <input class="input-number" type="text" value="1" min="0" max="10">
-                    <span class="input-number-increment"> <i class="ti-angle-up"></i></span>
-                  </div>
-                </td>
-                <td>
-                  <h5>$720.00</h5>
-                </td>
-                <td>
-                  <i class="btn_3 small fas fa-trash-alt"></i>
-
-                </td>
-              </tr>
+            @foreach($items as $item)
+                <tr>
+                    <td>
+                        <div class="media">
+                            <div class="d-flex">
+                                <img style="height:200px; widows: 200px;" src="/storage/item/images/{{$item->image}}" alt=""/>
+                            </div>
+                            <div class="media-body">
+                                <p>{{$item->name}}</p>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <h5>{{$item->price}}</h5>
+                    </td>
+                    <td>
+                        <div class="product_count">
+                            {{--                                    <span class="input-number-decrement"> <i class="ti-angle-down"></i></span>--}}
+                            <input class="input-number" type="text" value="1" min="0" max="10">
+                            {{--                                    <span class="input-number-increment"> <i class="ti-angle-up"></i></span>--}}
+                        </div>
+                    </td>
+                    <td>
+                        <h5>{{$item->price}}</h5>
+                    </td>
+                    <td>
+                        <form method="post" action="/cart/{{$item->id}}">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn"><i class="btn_3 small fas fa-trash-alt"></i></button>
+                        </form>
+                    </td>
+                </tr>
+            @endforeach
               <tr class="bottom_button">
                 <td>
                   <!-- <a class="btn_1" href="#">Update Cart</a> -->
@@ -286,7 +227,10 @@
 
                 <td>
                   <div class="cupon_text float-right">
-                    <a class="btn_1" href="#">Update Cart</a>
+                      <form action="/assign/cashier" method="get">
+                          @csrf
+                         <button type="submit" class="btn_1" href="#">Continue</button>
+                      </form>
                   </div>
                 </td>
               </tr>
@@ -346,6 +290,7 @@
         </div>
       </div>
   </section>
+
   <!--================End Cart Area =================-->
 
   <!--::footer_part start::-->

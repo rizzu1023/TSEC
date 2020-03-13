@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Cart;
+use App\Cashier;
 use App\Item;
+use App\Otp;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -109,8 +111,21 @@ class CartController extends Controller
             $query->where('user_id', $id);
         })->get();
         $total_price = $items->sum('price');
+        $assign = 1;
+
+        $cashier = Cashier::orderBy('customer_count','asc')->first();
+
+        $customer = Otp::where('user_id', auth()->user()->id)->first();
+        if($customer){
+            $customer->delete();
+        }
+        $data = Otp::create([
+            'user_id' => auth()->user()->id,
+            'cashier_id' => $cashier->id,
+            'otp' => mt_rand(1000,9999),
+        ]);
 
 
-        return view('Main.cart',compact('items','total_price'));
+        return view('Main.index',compact('items','total_price','assign','data'));
     }
 }
