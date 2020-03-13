@@ -22,7 +22,7 @@ class ItemController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function create()
     {
@@ -33,7 +33,7 @@ class ItemController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function store(Request $request)
     {
@@ -52,18 +52,9 @@ class ItemController extends Controller
             'image' => $fileNameToStore,
             'price' => $request->price,
             'category' => $request->category,
-            'size' => $request->size,
-            'color' => $request->color,
             'description' => $request->description,
-            'sub_category' => $request->sub_category,
             'vendor_id' => $request->vendor_id,
-            'brand' => $request->brand,
-            'model_no' => $request->model_no,
-            'height'=> $request->height,
-            'weight' => $request->weight,
-            'width' => $request->width,
-            'warranty' => $request->warranty,
-            'model' => $request->model,
+            'store_id' => 1,
         ]);
 
         return redirect::route('item.index')->with('message','Item has been succesfully Added.');

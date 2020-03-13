@@ -18,7 +18,7 @@ class MainController extends Controller
     }
 
     public function cart(){
-        $items = Cart::where('user_id', auth()->user()->id)->get();
+//        $items = Cart::where('user_id', auth()->user()->id)->get();
 
         $user = User::findOrFail(auth()->user()->id);
 

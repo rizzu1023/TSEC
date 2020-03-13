@@ -42,7 +42,7 @@ class User extends Authenticatable
     }
 
     public function Customer(){
-        return $this->hasOne(Customer::class,'user_id');
+        return $this->hasOne(Customer::class,'user_id','id');
     }
 
     public function Cart(){

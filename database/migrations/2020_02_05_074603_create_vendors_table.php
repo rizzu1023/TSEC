@@ -15,12 +15,12 @@ class CreateVendorsTable extends Migration
     {
         Schema::create('vendors', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('mobile_no');
-            $table->string('document');
-            $table->string('address');
-            $table->integer('pincode');
-            $table->boolean('isVendor')->default(0);
             $table->unsignedInteger('user_id');
+            $table->string('mobile_no');
+            $table->integer('age');
+            $table->string('gender');
+            $table->string('document')->nullable();
+            $table->integer('isVendor')->default(0);
             $table->timestamps();
         });
     }

@@ -23,9 +23,6 @@
                                 <th>Image</th>
                                 <th>Price</th>
                                 <th>Category</th>
-                                <th>Size</th>
-                                <th>Color</th>
-                                <th>Sub_Category</th>
                                 <th>Vendor_Id</th>
                                 <th>Action</th>
                             </tr>
@@ -38,9 +35,6 @@
                                     <td>{{ $item->image }}</td>
                                     <td>{{ $item->price }}</td>
                                     <td>{{ $item->category }}</td>
-                                    <td>{{ $item->size }}</td>
-                                    <td>{{ $item->color }}</td>
-                                    <td>{{ $item->sub_category }}</td>
                                     <td>{{ $item->vendor_id }}</td>
                                     <td>
                                          <a class="btn btn-sm btn-square btn-primary" href="/admin/item/{{$item->id}}">Detail</a>

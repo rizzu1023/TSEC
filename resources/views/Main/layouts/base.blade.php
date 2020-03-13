@@ -27,6 +27,15 @@
     <link rel="stylesheet" href="{{asset('Main/css/price_rangs.css')}}">
     <!-- style CSS -->
     <link rel="stylesheet" href="{{asset('Main/css/style.css')}}">
+
+    <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js" ></script>
+    <style>
+        #preview{
+            width:100%;
+            height: 100%;
+            margin:0px auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -69,7 +78,7 @@
 {{--    <script src="{{asset('Main/https://kit.fontawesome.com/588cda5f94.js')}}" crossorigin="anonymous"></script>--}}
     <script src="{{asset('Main/js/custom.js')}}"></script>
     <script src="https://kit.fontawesome.com/588cda5f94.js" crossorigin="anonymous"></script>
-
+    @yield('js')
 </body>
 
 </html>

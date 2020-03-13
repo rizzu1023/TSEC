@@ -16,17 +16,10 @@ class CreateCustomersTable extends Migration
     {
         Schema::create('customers', function (Blueprint $table) {
             $table->bigIncrements('id');
-
-
-            $table->string('address')->nullable();
-            $table->date('dob')->nullable();
-            $table->string('gender')->nullable();
-            $table->bigInteger('mobile_no')->nullable();
-            $table->string('country')->nullable();
-            $table->string('state')->nullable();
-            $table->string('city')->nullable();
-            $table->integer('pincode')->nullable();
-            $table->unsignedInteger('user_id');
+            $table->integer('user_id');
+            $table->string('mobile_no');
+            $table->integer('age');
+            $table->string('gender');
             $table->timestamps();
         });
     }

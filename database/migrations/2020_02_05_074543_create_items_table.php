@@ -19,20 +19,13 @@ class CreateItemsTable extends Migration
             $table->string('name');
             $table->integer('price');
             $table->string('image');
+            $table->string('qr_image')->nullable();
             $table->string('category');
-            $table->string('size')->nullable();
-            $table->string('color')->nullable();
             $table->string('description');
-            $table->string('sub_category');
-            $table->boolean('availabe')->default(1);
-            $table->string('brand');
-            $table->string('model_no');
-            $table->string('height')->nullable();
-            $table->string('weight')->nullable();
-            $table->string('width')->nullable();
-            $table->string('warranty');
+            $table->boolean('available')->default(1);
             $table->string('model')->nullable();
             $table->integer('vendor_id');
+            $table->integer('store_id');
             $table->timestamps();
         });
     }

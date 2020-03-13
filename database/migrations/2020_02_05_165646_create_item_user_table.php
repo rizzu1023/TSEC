@@ -17,6 +17,7 @@ class CreateItemUserTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('item_id');
+            $table->unsignedInteger('cashier_id');
             $table->timestamps();
         });
     }

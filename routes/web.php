@@ -32,7 +32,7 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function(){
 
     Route::resource('/order','OrderController');
 
-    Route::resource('/item','ItemController')->middleware('vendor');
+    Route::resource('/item','ItemController');
 });
 
 Route::get('/checkout','PayController@checkout');
