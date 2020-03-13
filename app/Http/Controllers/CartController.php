@@ -100,4 +100,17 @@ class CartController extends Controller
 
         return redirect::back()->with('message','Removed from cart');
     }
+
+    public function assign_cashier(){
+        $user = User::findOrFail(auth()->user()->id);
+
+        $id = $user->id;
+        $items = Item::whereHas('User',function($query) use($id){
+            $query->where('user_id', $id);
+        })->get();
+        $total_price = $items->sum('price');
+
+
+        return view('Main.cart',compact('items','total_price'));
+    }
 }

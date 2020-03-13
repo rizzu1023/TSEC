@@ -21,7 +21,7 @@
     <!--================Cart Area =================-->
     <section class="cart_area padding_top">
         <div class="container">
-            <video id="preview"></video>
+{{--            <video id="preview"></video>--}}
             <div class="cart_inner">
                 <div class="table-responsive">
                     <table class="table">
@@ -156,7 +156,12 @@
                         </tbody>
                     </table>
                     <div class="checkout_btn_inner float-right">
-                        <a class="btn_1" href="index.html">Continue Shopping</a>
+                    <form action="/assign/cashier" method="get">
+                        @csrf
+                        <button class="btn_1" type="submit">Continue Shopping</button>
+                    </form>
+
+{{--                        <a class="btn_1" href="index.html">Continue Shopping</a>--}}
                         <button type="submit" class="btn_1 btn checkout_btn_1" data-toggle="modal" data-target="#exampleModal">Proceed to checkout</button>
                     </div>
                 </div>
@@ -240,25 +245,25 @@
 @endsection
 
 @section('js')
-    <script>
-        let scanner = new Instascan.Scanner(
-            {
-                video: document.getElementById('preview'),
-                mirror: false
-            }
-        );
+{{--    <script>--}}
+{{--        let scanner = new Instascan.Scanner(--}}
+{{--            {--}}
+{{--                video: document.getElementById('preview'),--}}
+{{--                mirror: false--}}
+{{--            }--}}
+{{--        );--}}
 
-        scanner.addListener('scan', function(content) {
-            alert('Escaneou o conteudo: ' + content);
-            window.open(content, "_blank");
-        });
-        Instascan.Camera.getCameras().then(cameras =>
-        {
-            if(cameras.length > 0){
-                scanner.start(cameras[1]);
-            } else {
-                console.error("Não existe câmera no dispositivo!");
-            }
-        });
-    </script>
+{{--        scanner.addListener('scan', function(content) {--}}
+{{--            alert('Escaneou o conteudo: ' + content);--}}
+{{--            window.open(content, "_blank");--}}
+{{--        });--}}
+{{--        Instascan.Camera.getCameras().then(cameras =>--}}
+{{--        {--}}
+{{--            if(cameras.length > 0){--}}
+{{--                scanner.start(cameras[0]);--}}
+{{--            } else {--}}
+{{--                console.error("Não existe câmera no dispositivo!");--}}
+{{--            }--}}
+{{--        });--}}
+{{--    </script>--}}
     @endsection

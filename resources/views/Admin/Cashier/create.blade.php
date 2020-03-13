@@ -14,37 +14,44 @@
                         Add Offer
                     </div>
                     <div class="card-body">
-                        <form class="form-horizontal" method="post" action="{{ route('offer.store') }}"
+                        <form class="form-horizontal" method="post" action="{{ route('cashier.store') }}"
                               enctype="multipart/form-data" id="teamCreateForm">
                             @csrf
 
-                            <div class="form-group row">
-                                <label class="col-md-2 col-form-label" for="title">Offer Price</label>
-                                <div class="col-md-3">
-                                    <input class="form-control" id="title" type="number" name="offer_price"
-                                           placeholder="Eg:- 40">
+                            <div>
+                                <label class="col-md-3 col-form-label" for="title">Name</label>
+                                <div class="col-md-8">
+                                    <input class="form-control" id="title" type="text" name="name"
+                                           >
                                 </div>
-                                <label class="col-md-2 col-form-label" for="tagline">Offer Percentage</label>
-                                <div class="col-md-3">
-                                    <input class="form-control" id="tagline" type="text" name="offer_percentage"
-                                           placeholder="45 % (percent)">
+
+                            </div>
+                            <div>
+                                <label class="col-md-3 col-form-label" for="tagline">Email</label>
+                                <div class="col-md-8">
+                                    <input class="form-control" id="tagline" type="text" name="email"
+                                    >
                                 </div>
                             </div>
-                            <div class="form-group row">
-                                <label class="col-md-2 col-form-label" for="duration">Item</label>
-                                <div class="col-md-3">
-                                    <select class="form-control" id="duration" name="event_id">
-                                        <option selected disabled>select item</option>
-                                        @foreach($items as $item)
-                                            <option value="{{$item->id}}">{{$item->name}}</option>
-                                        @endforeach
-                                    </select>
+                            <div>
+                                <label class="col-md-3 col-form-label" for="tagline">Password</label>
+                                <div class="col-md-8">
+                                    <input class="form-control" id="tagline" type="password" name="password"
+                                    >
                                 </div>
                             </div>
-                            
+                            <div>
+                                <label class="col-md-3 col-form-label" for="tagline">Confirm Password</label>
+                                <div class="col-md-8">
+                                    <input class="form-control" id="tagline" type="password" name="c_password"
+                                    >
+                                </div>
+                            </div>
+
+
 
                             <button class="btn btn-md btn-primary" type="submit" style="float: right">
-                                <i class="fa fa-dot-circle-o"></i> Submit
+                                <i class="fa fa-dot-circle-o"></i> Create
                             </button>
 
                         </form>
@@ -58,7 +65,7 @@
     </section>
 @endsection
 
-{{-- 
+{{--
 @section('js')
     <script>
         $(document).ready(function () {

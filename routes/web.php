@@ -33,13 +33,14 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function(){
     Route::resource('/order','OrderController');
 
     Route::resource('/item','ItemController');
+    Route::resource('/cashier','CashierController');
 });
 
 Route::get('/checkout','PayController@checkout');
 Route::post('/pay','PayController@pay');
 Route::get('/pay-success', 'PayController@success');
 
-Route::resource('/offer','OfferController');
+//Route::resource('/offer','OfferController');
 
 Route::get('/', 'MainController@index')->name('Main.index');
 Route::get('/cart','MainController@cart')->middleware('auth');
@@ -64,6 +65,8 @@ Route::post('/customer/register','AdminController@register')->name('register.sto
 
 Route::get('/location','GeoLocationController@location');
 Route::get('/recommend','MainController@recommend')->middleware('auth');
+
+Route::get('/assign/cashier','CartController@assign_cashier');
 
 
 

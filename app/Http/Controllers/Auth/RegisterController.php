@@ -72,12 +72,15 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
 
+
+
 //        $customer = new Customer;
-//        $customer->address = 'this is address';
+//        $customer->store_id = 0;
 //        $customer->user_id = $user->id;
+//        $customer->customer_count = 0;
 //        $customer->save();
-//
-//
+
+
 //        return "Success";
     }
 }
