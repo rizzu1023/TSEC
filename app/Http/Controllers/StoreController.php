@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Search;
+use App\Store;
 use Illuminate\Http\Request;
 
-class SearchController extends Controller
+class StoreController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class SearchController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Search  $search
+     * @param  \App\Store  $store
      * @return \Illuminate\Http\Response
      */
-    public function show(Search $search)
+    public function show(Store $store)
     {
         //
     }
@@ -52,10 +52,10 @@ class SearchController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Search  $search
+     * @param  \App\Store  $store
      * @return \Illuminate\Http\Response
      */
-    public function edit(Search $search)
+    public function edit(Store $store)
     {
         //
     }
@@ -64,10 +64,10 @@ class SearchController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Search  $search
+     * @param  \App\Store  $store
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Search $search)
+    public function update(Request $request, Store $store)
     {
         //
     }
@@ -75,10 +75,10 @@ class SearchController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Search  $search
+     * @param  \App\Store  $store
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Search $search)
+    public function destroy(Store $store)
     {
         //
     }

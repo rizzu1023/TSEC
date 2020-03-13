@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Offer;
+use App\OrderDetail;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
 
-class OfferController extends Controller
+class OrderDetailController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,7 @@ class OfferController extends Controller
      */
     public function index()
     {
-        $offers = Offer::all();
-        return view('Admin.Offer.index',compact('offers'));
+        //
     }
 
     /**
@@ -26,7 +24,7 @@ class OfferController extends Controller
      */
     public function create()
     {
-        return view('Admin.Offer.create');
+        //
     }
 
     /**
@@ -37,33 +35,27 @@ class OfferController extends Controller
      */
     public function store(Request $request)
     {
-        $offer = Offer::create([
-            'offer_price' => $request->offer_price,
-            'offer_percent' => $request->offer_percent,
-            'item_id' => $request->item_id,
-        ]);
-
-        return redirect::route('offer.index')->with('message','Offer has been succesfully Applied.');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Offer  $offer
+     * @param  \App\OrderDetail  $orderDetail
      * @return \Illuminate\Http\Response
      */
-    public function show(Offer $offer)
+    public function show(OrderDetail $orderDetail)
     {
-        return view('Admin.Offer.show',compact('offer'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Offer  $offer
+     * @param  \App\OrderDetail  $orderDetail
      * @return \Illuminate\Http\Response
      */
-    public function edit(Offer $offer)
+    public function edit(OrderDetail $orderDetail)
     {
         //
     }
@@ -72,10 +64,10 @@ class OfferController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Offer  $offer
+     * @param  \App\OrderDetail  $orderDetail
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Offer $offer)
+    public function update(Request $request, OrderDetail $orderDetail)
     {
         //
     }
@@ -83,12 +75,11 @@ class OfferController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Offer  $offer
+     * @param  \App\OrderDetail  $orderDetail
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Offer $offer)
+    public function destroy(OrderDetail $orderDetail)
     {
-        $offer->delete();
-        return redirect::route('offer.index')->with('message','Successfully offer Deleted');
+        //
     }
 }

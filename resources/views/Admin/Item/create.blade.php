@@ -34,21 +34,18 @@
 
                             <div class="form-group row">
                                 <label class="col-md-2 col-form-label" for="duration">Category</label>
+
+
+
                                 <div class="col-md-3">
-                                    <select class="form-control" id="duration" name="category">
-                                        <option selected disabled>select category</option>
-                                        <option value="books">Books</option>
-                                        <option value="fashion">Fashion</option>
-                                        <option value="electronics">Electronics</option>
-                                        <option value="furniture">Furniture</option>
-                                        <option value="sports">Sports</option>
-                                    </select>
+                                    <input class="form-control" id="email-input" type="text" name="category"
+                                           >
                                 </div>
 
-                                <label class="col-md-2 col-form-label" for="sub_category">Sub Category</label>
+                                <label class="col-md-2 col-form-label" for="size">Description</label>
                                 <div class="col-md-3">
-                                    <input class="form-control" id="email-input" type="text" name="sub_category"
-                                           placeholder="Eg: shirt, jeans">
+                                    <input class="form-control" id="email-input" type="text" name="description"
+                                           placeholder="Eg:- Describe about the product">
                                 </div>
                             </div>
 
@@ -60,93 +57,25 @@
                                            placeholder="Eg. 450\-">
                                 </div>
 
-                                <label class="col-md-2 col-form-label" for="size">Size</label>
-                                <div class="col-md-3">
-                                    <input class="form-control" id="email-input" type="text" name="size"
-                                           placeholder="Eg:- M, L, XL">
-                                </div>
+
 
                             </div>
 
                             <div class="form-group row">
-                                <label class="col-md-2 col-form-label" for="color">Color</label>
-                                <div class="col-md-3">
-                                    <input class="form-control" id="email-input" type="text" name="color"
-                                           placeholder="Eg:- red, Green">
-                                </div>
 
 
-                                <label class="col-md-2 col-form-label" for="size">Description</label>
-                                <div class="col-md-3">
-                                    <input class="form-control" id="email-input" type="text" name="description"
-                                           placeholder="Eg:- Describe about the product">
-                                </div>
+
+
 
                             </div>
 
 
-                           <div class="form-group row">
-                            <label class="col-md-2 col-form-label" for="size">Model</label>
-                                <div class="col-md-3">
-                                    <input class="form-control" id="email-input" type="text" name="model"
-                                           placeholder="">
-                                </div>
-                                {{-- <label class="col-md-2 col-form-label" for="duration">Vendor</label>
-                                <div class="col-md-3">
-                                    <select class="form-control" id="duration" name="vendor_id">
-                                        <option selected disabled>select Vendor</option>
-                                        @foreach($vendors as $vendor)
-                                            <option value="{{$vendor->id}}">{{$vendor->name}}</option>
-                                        @endforeach
-                                    </select>
-                                </div> --}}
 
-                            </div>
 
-                            <div class="form-group row">
-                                <label class="col-md-2 col-form-label" for="brand">Brand</label>
-                                <div class="col-md-3">
-                                    <input class="form-control" id="email-input" type="text" name="brand"
-                                           placeholder="Eg:- HRX">
-                                </div>
 
-                                <label class="col-md-2 col-form-label" for="size">Model No</label>
-                                <div class="col-md-3">
-                                    <input class="form-control" id="email-input" type="text" name="model_no"
-                                           placeholder="Eg:-425 ">
-                                </div>
 
-                            </div>
 
-                            <div class="form-group row">
-                                <label class="col-md-2 col-form-label" for="height">Height</label>
-                                <div class="col-md-3">
-                                    <input class="form-control" id="email-input" type="text" name="height"
-                                           placeholder="Eg:- 80cm">
-                                </div>
 
-                                <label class="col-md-2 col-form-label" for="weight">Weight </label>
-                                <div class="col-md-3">
-                                    <input class="form-control" id="email-input" type="text" name="weight"
-                                           placeholder="Eg:-45kg ">
-                                </div>
-
-                            </div>
-
-                            <div class="form-group row">
-                                <label class="col-md-2 col-form-label" for="width">Width</label>
-                                <div class="col-md-3">
-                                    <input class="form-control" id="email-input" type="text" name="width"
-                                           placeholder="Eg:-10">
-                                </div>
-
-                                <label class="col-md-2 col-form-label" for="weight">Warranty</label>
-                                <div class="col-md-3">
-                                    <input class="form-control" id="email-input" type="text" name="warranty"
-                                           placeholder="Eg:- 1 year ">
-                                </div>
-
-                            </div>
 
 
 

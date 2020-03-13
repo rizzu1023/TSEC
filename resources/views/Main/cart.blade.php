@@ -21,6 +21,7 @@
     <!--================Cart Area =================-->
     <section class="cart_area padding_top">
         <div class="container">
+{{--            <video id="preview"></video>--}}
             <div class="cart_inner">
                 <div class="table-responsive">
                     <table class="table">
@@ -138,40 +139,7 @@
 {{--                            </td>--}}
 {{--                        </tr>--}}
 
-                        <tr class="shipping_area">
-                            <td></td>
-                            <td></td>
-                            <td></td>
 
-                            <td>
-                                <!-- <h5>Shipping</h5> -->
-                            </td>
-                            <td>
-                                <div class="shipping_box">
-                                    <ul class="list">
-                                        <li class="active">
-                                            <a>Free Delivery</a>
-                                        </li>
-                                    </ul>
-                                    <!-- <h6>
-                                      Calculate Shipping
-                                      <i class="fa fa-caret-down" aria-hidden="true"></i>
-                                    </h6>
-                                    <select class="shipping_select">
-                                      <option value="1">Bangladesh</option>
-                                      <option value="2">India</option>
-                                      <option value="4">Pakistan</option>
-                                    </select>
-                                    <select class="shipping_select section_bg">
-                                      <option value="1">Select a State</option>
-                                      <option value="2">Select a State</option>
-                                      <option value="4">Select a State</option>
-                                    </select>
-                                    <input type="text" placeholder="Postcode/Zipcode" />
-                                    <a class="btn_1" href="#">Update Details</a> -->
-                                </div>
-                            </td>
-                        </tr>
                         <tr>
                             <td></td>
                             <td></td>
@@ -219,14 +187,14 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1">Mobile Number</span>
                         </div>
-                        <input readonly="" type="text" class="form-control"  name="mobile_no" aria-label="Username" aria-describedby="basic-addon1" value="{{auth()->user()->Customer->mobile_no}}"/>
+{{--                        <input readonly="" type="text" class="form-control"  name="mobile_no" aria-label="Username" aria-describedby="basic-addon1" value="{{auth()->user()->Customer->mobile_no}}"/>--}}
                     </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1">Address</span>
-                        </div>
-                        <input readonly="" type="text" class="form-control" name="address" aria-label="Username" aria-describedby="basic-addon1" value="{{auth()->user()->Customer->address}}"/>
-                    </div>
+{{--                    <div class="input-group mb-3">--}}
+{{--                        <div class="input-group-prepend">--}}
+{{--                            <span class="input-group-text" id="basic-addon1">Address</span>--}}
+{{--                        </div>--}}
+{{--                        <input readonly="" type="text" class="form-control" name="address" aria-label="Username" aria-describedby="basic-addon1" value="{{auth()->user()->Customer->address}}"/>--}}
+{{--                    </div>--}}
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1">Email</span>
@@ -270,3 +238,27 @@
 
 
 @endsection
+
+@section('js')
+{{--    <script>--}}
+{{--        let scanner = new Instascan.Scanner(--}}
+{{--            {--}}
+{{--                video: document.getElementById('preview'),--}}
+{{--                mirror: false--}}
+{{--            }--}}
+{{--        );--}}
+
+{{--        scanner.addListener('scan', function(content) {--}}
+{{--            alert('Escaneou o conteudo: ' + content);--}}
+{{--            window.open(content, "_blank");--}}
+{{--        });--}}
+{{--        Instascan.Camera.getCameras().then(cameras =>--}}
+{{--        {--}}
+{{--            if(cameras.length > 0){--}}
+{{--                scanner.start(cameras[0]);--}}
+{{--            } else {--}}
+{{--                console.error("Não existe câmera no dispositivo!");--}}
+{{--            }--}}
+{{--        });--}}
+{{--    </script>--}}
+    @endsection

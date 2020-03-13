@@ -9,8 +9,8 @@
                 </li>
 {{--            @endif--}}
 
-            @if(auth()->user()->Vendor)
-                @if(Auth()->user()->Vendor->isVendor == '1')
+{{--            @if(auth()->user()->Vendor)--}}
+{{--                @if(Auth()->user()->Vendor->isVendor == '1')--}}
                     <li class="nav-item">
                         <a class="nav-link" href="/admin/item">
                             <i class="nav-icon icon-drop"></i>Item</a>
@@ -19,8 +19,8 @@
                         <a class="nav-link" href="/admin/order">
                             <i class="nav-icon icon-drop"></i>Sold History</a>
                     </li>
-                @endif
-            @endif
+{{--                @endif--}}
+{{--            @endif--}}
 
             {{--            <li class="nav-item">--}}
             {{--                <a class="nav-link" href="#">--}}
