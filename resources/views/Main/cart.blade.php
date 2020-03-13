@@ -21,7 +21,7 @@
     <!--================Cart Area =================-->
     <section class="cart_area padding_top">
         <div class="container">
-{{--            <video id="preview"></video>--}}
+            <video id="preview"></video>
             <div class="cart_inner">
                 <div class="table-responsive">
                     <table class="table">
@@ -240,25 +240,25 @@
 @endsection
 
 @section('js')
-{{--    <script>--}}
-{{--        let scanner = new Instascan.Scanner(--}}
-{{--            {--}}
-{{--                video: document.getElementById('preview'),--}}
-{{--                mirror: false--}}
-{{--            }--}}
-{{--        );--}}
+    <script>
+        let scanner = new Instascan.Scanner(
+            {
+                video: document.getElementById('preview'),
+                mirror: false
+            }
+        );
 
-{{--        scanner.addListener('scan', function(content) {--}}
-{{--            alert('Escaneou o conteudo: ' + content);--}}
-{{--            window.open(content, "_blank");--}}
-{{--        });--}}
-{{--        Instascan.Camera.getCameras().then(cameras =>--}}
-{{--        {--}}
-{{--            if(cameras.length > 0){--}}
-{{--                scanner.start(cameras[0]);--}}
-{{--            } else {--}}
-{{--                console.error("Não existe câmera no dispositivo!");--}}
-{{--            }--}}
-{{--        });--}}
-{{--    </script>--}}
+        scanner.addListener('scan', function(content) {
+            alert('Escaneou o conteudo: ' + content);
+            window.open(content, "_blank");
+        });
+        Instascan.Camera.getCameras().then(cameras =>
+        {
+            if(cameras.length > 0){
+                scanner.start(cameras[1]);
+            } else {
+                console.error("Não existe câmera no dispositivo!");
+            }
+        });
+    </script>
     @endsection
