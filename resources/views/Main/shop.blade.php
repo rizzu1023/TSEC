@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>aranoz</title>
-    <link rel="icon" href="{{asset('Main\img/favicon.png">
+    <link rel="icon" href="{{asset('Main\img/favicon.png')}}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{asset('Main\css/bootstrap.min.css')}}">
     <!-- animate CSS -->
@@ -28,108 +28,7 @@
 
 <body>
     <!--::header part start::-->
-    <header class="main_menu home_menu">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <nav class="navbar navbar-expand-lg navbar-light">
-                       <a class="logo navbar-brand" href="{{asset('Main\index.html"> <img style="height:30px;max-width:100%;" src="{{asset('Main\img/logo.svg" alt="logo"> </a>
-  
-                        <button class="navbar-toggler" type="button" data-toggle="collapse"
-                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="menu_icon"><i class="fas fa-bars"></i></span>
-                        </button>
-  
-                        <div class="collapse navbar-collapse main-menu-item" id="navbarSupportedContent">
-                            <ul class="navbar-nav">
-                                <!-- <li class="nav-item">
-                                    <a class="nav-link" href="{{asset('Main\index.html">Home</a>
-                                </li> -->
-                                <!-- <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="{{asset('Main\blog.html" id="navbarDropdown_1"
-                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Shop
-                                    </a>
-                                    
-                                </li> -->
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{asset('Main\index.html">Shop</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{asset('Main\shop.html">Add to Cart</a>
-                                </li>
-                                <!-- <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="{{asset('Main\blog.html" id="navbarDropdown_3"
-                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        pages
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                                        <a class="dropdown-item" href="{{asset('Main\login.html"> login</a>
-                                        <a class="dropdown-item" href="{{asset('Main\tracking.html">tracking</a>
-                                        <a class="dropdown-item" href="{{asset('Main\checkout.html">product checkout</a>
-                                        <a class="dropdown-item" href="{{asset('Main\cart.html">shopping cart</a>
-                                        <a class="dropdown-item" href="{{asset('Main\confirmation.html">confirmation</a>
-                                        <a class="dropdown-item" href="{{asset('Main\elements.html">elements</a>
-                                    </div>
-                                </li> -->
-                                <!-- <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="{{asset('Main\blog.html" id="navbarDropdown_2"
-                                        role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        blog
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                                        <a class="dropdown-item" href="{{asset('Main\blog.html"> blog</a>
-                                        <a class="dropdown-item" href="{{asset('Main\single-blog.html">Single blog</a>
-                                    </div>
-                                </li> -->
-                               
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{asset('Main\contact.html">Contact us</a>
-                                </li>
-  
-                                <li class="nav-item">
-                                    <a class="btn-sm vendorbtn" href="{{asset('Main\login.html">Register Now</a>
-                                </li>
-                            </ul>
-                        </div>
-  
-                        <div class="hearer_icon d-flex">
-                              
-                            <a style="padding-top: 10px;" href="{{asset('Main\cart.html"><i class="fa fa-cart-plus"></i></a>
-  
-  
-                            <li class="nav-item dropdown">
-                             <a class="nav-link dropdown-toggle" href="{{asset('Main\blog.html" id="navbarDropdown_3"
-                                 role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                 <i style="padding-top: 5px;" class="fas fa-user-circle"></i>
-                                 
-                             </a>
-                             <div class="dropdown-menu" aria-labelledby="navbarDropdown_2">
-                                 <a class="dropdown-item" href="{{asset('Main\login.html"> Account Info</a>
-                                 <a class="dropdown-item" href="{{asset('Main\tracking.html">Orders</a>
-                                 <a class="dropdown-item" href="{{asset('Main\cart.html">Shopping Cart</a>
-                                 <a class="dropdown-item" href="{{asset('Main\elements.html">Sign Out  </a>
-                             </div>
-  
-                         </li>
-  
-  
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-        <div class="search_input" id="search_input_box">
-            <div class="container ">
-                <form class="d-flex justify-content-between search-inner">
-                    <input type="text" class="form-control" id="search_input" placeholder="Search Here">
-                    <button type="submit" class="btn"></button>
-                    <span class="ti-close" id="close_search" title="Close Search"></span>
-                </form>
-            </div>
-        </div>
-    </header>
+    
     <!-- Header part end-->
 
     <!-- banner part start-->
@@ -147,12 +46,12 @@
                                                 Sofa</h1>
                                             <p>Incididunt ut labore et dolore magna aliqua quis ipsum
                                                 suspendisse ultrices gravida. Risus commodo viverra</p>
-                                            <a href="{{asset('Main\#" class="btn_2">Start Shopping</a>
+                                            <a href="#" class="btn_2">Start Shopping</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="banner_img d-none d-lg-block">
-                                    <img src="{{asset('Main\img/bg.jpg')}}" alt="">
+                                    <img src="{{asset('Main\img\bg.jpg')}}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -165,12 +64,12 @@
                                                 Sofa</h1>
                                             <p>Incididunt ut labore et dolore magna aliqua quis ipsum
                                                 suspendisse ultrices gravida. Risus commodo viverra</p>
-                                            <a href="{{asset('Main\#" class="btn_2">buy now</a>
+                                            <a href="#" class="btn_2">buy now</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="banner_img d-none d-lg-block">
-                                    <img src="{{asset('Main\img/banner_img.png" alt="">
+                                    <img src="{{asset('Main\img\banner_img.png')}}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -183,12 +82,12 @@
                                                 Sofa</h1>
                                             <p>Incididunt ut labore et dolore magna aliqua quis ipsum
                                                 suspendisse ultrices gravida. Risus commodo viverra</p>
-                                            <a href="{{asset('Main\#" class="btn_2">buy now</a>
+                                            <a href="#" class="btn_2">buy now</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="banner_img d-none d-lg-block">
-                                    <img src="{{asset('Main\img/banner_img.png" alt="">
+                                    <img src="{{asset('Main\img\banner_img.png')}}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -205,7 +104,7 @@
                                     </div>
                                 </div>
                                 <div class="banner_img d-none d-lg-block">
-                                    <img src="{{asset('Main\img/banner_img.png" alt="">
+                                    <img src="{{asset('Main\img/banner_img.png')}}" alt="">
                                 </div>
                             </div>
                         </div> -->
@@ -233,7 +132,7 @@
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_1.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_1.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -243,7 +142,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_2.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_2.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -253,7 +152,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_3.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_3.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -263,7 +162,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_4.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_4.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -273,7 +172,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_5.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_5.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -283,7 +182,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_6.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_6.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -293,7 +192,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_7.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_7.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -303,7 +202,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_8.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_8.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -317,7 +216,7 @@
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_1.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_1.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -327,7 +226,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_2.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_2.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -337,7 +236,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_3.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_3.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -347,7 +246,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_4.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_4.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -357,7 +256,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_5.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_5.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -367,7 +266,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_6.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_6.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -377,7 +276,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_7.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_7.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -387,7 +286,7 @@
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_8.png" alt="">
+                                        <img src="{{asset('Main\img/product/product_8.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
@@ -419,7 +318,7 @@
                         <h3>Electronics</h3>
                         <p>latest Electronics products</p>
                         <a href="{{asset('Main\category.html" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
-                        <img src="{{asset('Main\img/feature/feature_1.png" alt="">
+                        <img src="{{asset('Main\img/feature/feature_1.png')}}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-5 col-sm-6">
@@ -427,7 +326,7 @@
                         <h3>Fashion</p>
                         <p>Latest Fashion</p>
                         <a href="{{asset('Main\category.html" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
-                        <img src="{{asset('Main\img/feature/333.png" alt="">
+                        <img src="{{asset('Main\img/feature/333.png')}}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-5 col-sm-6">
@@ -435,7 +334,7 @@
                         <h3>Sports</h3>
                         <p>Latest Sports</p>
                         <a href="{{asset('Main\category.html" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
-                        <img src="{{asset('Main\img/feature/sports.png" alt="">
+                        <img src="{{asset('Main\img/feature/sports.png')}}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-7 col-sm-6">
@@ -443,7 +342,7 @@
                         <h3>Furnitures</h3>
                         <p></p>Latest in Furnitures</h3>
                         <a href="{{asset('Main\category.html" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
-                        <img src="{{asset('Main\img/feature/feature_4.png" alt="">
+                        <img src="{{asset('Main\img/feature/feature_4.png')}}" alt="">
                     </div>
                 </div>
             </div>
@@ -461,7 +360,7 @@
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-6 col-md-6">
                     <div class="offer_img">
-                        <img src="{{asset('Main\img/offer_img.png" alt="">
+                        <img src="{{asset('Main\img/offer_img.png')}}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
@@ -504,35 +403,35 @@
                 <div class="col-lg-12">
                     <div class="best_product_slider owl-carousel">
                         <div class="single_product_item">
-                            <img src="{{asset('Main\img/product/product_1.png" alt="">
+                            <img src="{{asset('Main\img/product/product_1.png')}}" alt="">
                             <div class="single_product_text">
                                 <h4>Quartz Belt Watch</h4>
                                 <h3>$150.00</h3>
                             </div>
                         </div>
                         <div class="single_product_item">
-                            <img src="{{asset('Main\img/product/product_2.png" alt="">
+                            <img src="{{asset('Main\img/product/product_2.png')}}" alt="">
                             <div class="single_product_text">
                                 <h4>Quartz Belt Watch</h4>
                                 <h3>$150.00</h3>
                             </div>
                         </div>
                         <div class="single_product_item">
-                            <img src="{{asset('Main\img/product/product_3.png" alt="">
+                            <img src="{{asset('Main\img/product/product_3.png')}}" alt="">
                             <div class="single_product_text">
                                 <h4>Quartz Belt Watch</h4>
                                 <h3>$150.00</h3>
                             </div>
                         </div>
                         <div class="single_product_item">
-                            <img src="{{asset('Main\img/product/product_4.png" alt="">
+                            <img src="{{asset('Main\img/product/product_4.png')}}" alt="">
                             <div class="single_product_text">
                                 <h4>Quartz Belt Watch</h4>
                                 <h3>$150.00</h3>
                             </div>
                         </div>
                         <div class="single_product_item">
-                            <img src="{{asset('Main\img/product/product_5.png" alt="">
+                            <img src="{{asset('Main\img/product/product_5.png')}}" alt="">
                             <div class="single_product_text">
                                 <h4>Quartz Belt Watch</h4>
                                 <h3>$150.00</h3>
@@ -561,34 +460,34 @@
                 </div>
                 <div class="col-lg-12">
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_1.png" alt="">
+                        <img src="{{asset('Main\img/client_logo/client_logo_1.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_2.png" alt="">
+                        <img src="{{asset('Main\img/client_logo/client_logo_2.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_3.png" alt="">
+                        <img src="{{asset('Main\img/client_logo/client_logo_3.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_4.png" alt="">
+                        <img src="{{asset('Main\img/client_logo/client_logo_4.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_5.png" alt="">
+                        <img src="{{asset('Main\img/client_logo/client_logo_5.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_3.png" alt="">
+                        <img src="{{asset('Main\img/client_logo/client_logo_3.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_1.png" alt="">
+                        <img src="{{asset('Main\img/client_logo/client_logo_1.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_2.png" alt="">
+                        <img src="{{asset('Main\img/client_logo/client_logo_2.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_3.png" alt="">
+                        <img src="{{asset('Main\img/client_logo/client_logo_3.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_4.png" alt="">
+                        <img src="{{asset('Main\img/client_logo/client_logo_4.png')}}" alt="">
                     </div>
                 </div>
             </div>
