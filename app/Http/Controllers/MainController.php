@@ -12,7 +12,9 @@ use Illuminate\Support\Facades\DB;
 
 class MainController extends Controller
 {
+    private $current_user;
     public function index(){
+        $this->current_user = auth()->user()->id;
         $items = collect();
         $total_price = 0;
         if(auth()) {
@@ -116,6 +118,14 @@ class MainController extends Controller
         $max_search = Search::select('search_text')->where('customer_id',auth()->user()->id)->orderBy('count','desc')->take(2)->get();
         $items = Item::where('category',$max_search['0']->search_text)->orWhere('category',$max_search['1']->search_text)->get();
         return view('Main.category',compact('items'));
+    }
+
+    public function item_added(Request $request,$item_id){
+        $item = Item::find($item_id);
+//        return $this->current_user;
+        $user = User::find(1);
+        $user->Item()->syncWithoutDetaching($item);
+        return "Item Added";
     }
 
 

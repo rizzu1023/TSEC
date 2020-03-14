@@ -8,10 +8,13 @@ use App\Item;
 use App\Otp;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Redirect;
 
 class CartController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -19,6 +22,7 @@ class CartController extends Controller
      */
     public function index()
     {
+
         return view('Main.cart');
     }
 
@@ -128,4 +132,6 @@ class CartController extends Controller
 
         return view('Main.index',compact('items','total_price','assign','data'));
     }
+
+
 }

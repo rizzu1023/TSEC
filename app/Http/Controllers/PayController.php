@@ -16,7 +16,7 @@ class PayController extends Controller
 
     public function pay(Request $request)
     {
-        return $request->all();
+//        return $request->all();
         $api = new \Instamojo\Instamojo(
             config('services.instamojo.api_key'),
             config('services.instamojo.auth_token'),
@@ -33,15 +33,15 @@ class PayController extends Controller
                 "redirect_url" => "http://127.0.0.1:8000/assign/cashier"
             ));
 
-//            $order = new Order;
-//            $order->buyer_name = $request->buyer_name;
+            $order = new Order;
+            $order->customer_id = $request->buyer_id;
 //            $order->product_name = $request->item_name;
 //            $order->email = $request->email;
 //            $order->mobile_no = $request->mobile_no;
 //            $order->address = $request->address;
 //            $order->price  = $request->price;
-//            $order->vendor_id = $request->vendor_id;
-//            $order->save();
+            $order->total_amount = $request->amount;
+            $order->save();
 
 
             header('Location: ' . $response['longurl']);

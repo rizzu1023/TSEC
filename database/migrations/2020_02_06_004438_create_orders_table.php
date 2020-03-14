@@ -17,7 +17,7 @@ class CreateOrdersTable extends Migration
             $table->bigIncrements('id');
             $table->integer('customer_id');
             $table->integer('cashier_id')->nullable();
-            $table->integer('vendor_id');
+//            $table->integer('vendor_id');
             $table->integer('total_amount');
             $table->timestamps();
         });
