@@ -15,7 +15,7 @@ class MainController extends Controller
     public function index(){
         $items = collect();
         $total_price = 0;
-        if(!auth()) {
+        if(auth()) {
 //            dd('asdf');
             $user = User::findOrFail(auth()->user()->id);
             $id = $user->id;
@@ -26,6 +26,7 @@ class MainController extends Controller
         }
 
         $assign = NULL;
+
         return view('Main.index',compact('items','total_price','assign'));
     }
 
