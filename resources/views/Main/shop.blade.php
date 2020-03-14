@@ -6,24 +6,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>aranoz</title>
-    <link rel="icon" href="{{asset('Main\img/favicon.png')}}">
+    <link rel="icon" href="{{asset('Main/img/favicon.png')}}">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{{asset('Main\css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('Main/css/bootstrap.min.css')}}">
     <!-- animate CSS -->
-    <link rel="stylesheet" href="{{asset('Main\css/animate.css')}}">
+    <link rel="stylesheet" href="{{asset('Main/css/animate.css')}}">
     <!-- owl carousel CSS -->
-    <link rel="stylesheet" href="{{asset('Main\css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('Main/css/owl.carousel.min.css')}}">
     <!-- font awesome CSS -->
-    <link rel="stylesheet" href="{{asset('Main\css/all.css')}}">
+    <link rel="stylesheet" href="{{asset('Main/css/all.css')}}">
     <!-- flaticon CSS -->
-    <link rel="stylesheet" href="{{asset('Main\css/flaticon.css')}}">
-    <link rel="stylesheet" href="{{asset('Main\css/themify-icons.css')}}">
+    <link rel="stylesheet" href="{{asset('Main/css/flaticon.css')}}">
+    <link rel="stylesheet" href="{{asset('Main/css/themify-icons.css')}}">
     <!-- font awesome CSS -->
-    <link rel="stylesheet" href="{{asset('Main\css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{asset('Main/css/magnific-popup.css')}}">
     <!-- swiper CSS -->
-    <link rel="stylesheet" href="{{asset('Main\css/slick.css')}}">
+    <link rel="stylesheet" href="{{asset('Main/css/slick.css')}}">
     <!-- style CSS -->
-    <link rel="stylesheet" href="{{asset('Main\css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('Main/css/style.css')}}">
 </head>
 
 <body>
@@ -52,7 +52,7 @@
                                     </div>
                                 </div>
                                 <div class="banner_img d-none d-lg-block">
-                                    <img src="{{asset('Main\img\bg.jpg')}}" alt="">
+                                    <img src="{{asset('Main/img/bg.jpg')}}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                                     </div>
                                 </div>
                                 <div class="banner_img d-none d-lg-block">
-                                    <img src="{{asset('Main\img\banner_img.png')}}" alt="">
+                                    <img src="{{asset('Main/img/banner_img.png')}}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -88,7 +88,7 @@
                                     </div>
                                 </div>
                                 <div class="banner_img d-none d-lg-block">
-                                    <img src="{{asset('Main\img\banner_img.png')}}" alt="">
+                                    <img src="{{asset('Main/img/banner_img.png')}}" alt="">
                                 </div>
                             </div>
                         </div>
@@ -100,12 +100,12 @@
                                             <h1>Cloth $ Wood Sofa</h1>
                                             <p>Incididunt ut labore et dolore magna aliqua quis ipsum
                                                 suspendisse ultrices gravida. Risus commodo viverra</p>
-                                            <a href="{{asset('Main\#" class="btn_2">buy now</a>
+                                            <a href="{{asset('Main/#" class="btn_2">buy now</a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="banner_img d-none d-lg-block">
-                                    <img src="{{asset('Main\img/banner_img.png')}}" alt="">
+                                    <img src="{{asset('Main/img/banner_img.png')}}" alt="">
                                 </div>
                             </div>
                         </div> -->
@@ -133,81 +133,81 @@
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_1.png')}}" alt="">
+                                        <img src="{{asset('Main/img/product/product_1.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
-                                            <a href="{{asset('Main\#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                            <a href="{{asset('Main/#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_2.png')}}" alt="">
+                                        <img src="{{asset('Main/img/product/product_2.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
-                                            <a href="{{asset('Main\#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                            <a href="{{asset('Main/#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_3.png')}}" alt="">
+                                        <img src="{{asset('Main/img/product/product_3.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
-                                            <a href="{{asset('Main\#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                            <a href="{{asset('Main/#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_4.png')}}" alt="">
+                                        <img src="{{asset('Main/img/product/product_4.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
-                                            <a href="{{asset('Main\#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                            <a href="{{asset('Main/#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_5.png')}}" alt="">
+                                        <img src="{{asset('Main/img/product/product_5.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
-                                            <a href="{{asset('Main\#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                            <a href="{{asset('Main/#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_6.png')}}" alt="">
+                                        <img src="{{asset('Main/img/product/product_6.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
-                                            <a href="{{asset('Main\#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                            <a href="{{asset('Main/#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_7.png')}}" alt="">
+                                        <img src="{{asset('Main/img/product/product_7.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
-                                            <a href="{{asset('Main\#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                            <a href="{{asset('Main/#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_8.png')}}" alt="">
+                                        <img src="{{asset('Main/img/product/product_8.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
-                                            <a href="{{asset('Main\#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                            <a href="{{asset('Main/#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -217,81 +217,81 @@
                             <div class="row align-items-center justify-content-between">
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_1.png')}}" alt="">
+                                        <img src="{{asset('Main/img/product/product_1.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
-                                            <a href="{{asset('Main\#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                            <a href="{{asset('Main/#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_2.png')}}" alt="">
+                                        <img src="{{asset('Main/img/product/product_2.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
-                                            <a href="{{asset('Main\#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                            <a href="{{asset('Main/#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_3.png')}}" alt="">
+                                        <img src="{{asset('Main/img/product/product_3.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
-                                            <a href="{{asset('Main\#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                            <a href="{{asset('Main/#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_4.png')}}" alt="">
+                                        <img src="{{asset('Main/img/product/product_4.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
-                                            <a href="{{asset('Main\#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                            <a href="{{asset('Main/#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_5.png')}}" alt="">
+                                        <img src="{{asset('Main/img/product/product_5.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
-                                            <a href="{{asset('Main\#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                            <a href="{{asset('Main/#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_6.png')}}" alt="">
+                                        <img src="{{asset('Main/img/product/product_6.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
-                                            <a href="{{asset('Main\#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                            <a href="{{asset('Main/#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_7.png')}}" alt="">
+                                        <img src="{{asset('Main/img/product/product_7.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
-                                            <a href="{{asset('Main\#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                            <a href="{{asset('Main/#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-lg-3 col-sm-6">
                                     <div class="single_product_item">
-                                        <img src="{{asset('Main\img/product/product_8.png')}}" alt="">
+                                        <img src="{{asset('Main/img/product/product_8.png')}}" alt="">
                                         <div class="single_product_text">
                                             <h4>Quartz Belt Watch</h4>
                                             <h3>$150.00</h3>
-                                            <a href="{{asset('Main\#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
+                                            <a href="{{asset('Main/#" class="add_cart">+ add to cart<i class="ti-heart"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -318,32 +318,32 @@
                     <div class="single_feature_post_text">
                         <h3>Electronics</h3>
                         <p>latest Electronics products</p>
-                        <a href="{{asset('Main\category.html" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
-                        <img src="{{asset('Main\img/feature/feature_1.png')}}" alt="">
+                        <a href="{{asset('Main/category.html" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
+                        <img src="{{asset('Main/img/feature/feature_1.png')}}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-5 col-sm-6">
                     <div class="single_feature_post_text">
                         <h3>Fashion</p>
                         <p>Latest Fashion</p>
-                        <a href="{{asset('Main\category.html" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
-                        <img src="{{asset('Main\img/feature/333.png')}}" alt="">
+                        <a href="{{asset('Main/category.html" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
+                        <img src="{{asset('Main/img/feature/333.png')}}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-5 col-sm-6">
                     <div class="single_feature_post_text">
                         <h3>Sports</h3>
                         <p>Latest Sports</p>
-                        <a href="{{asset('Main\category.html" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
-                        <img src="{{asset('Main\img/feature/sports.png')}}" alt="">
+                        <a href="{{asset('Main/category.html" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
+                        <img src="{{asset('Main/img/feature/sports.png')}}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-7 col-sm-6">
                     <div class="single_feature_post_text">
                         <h3>Furnitures</h3>
                         <p></p>Latest in Furnitures</h3>
-                        <a href="{{asset('Main\category.html" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
-                        <img src="{{asset('Main\img/feature/feature_4.png')}}" alt="">
+                        <a href="{{asset('Main/category.html" class="feature_btn">EXPLORE NOW <i class="fas fa-play"></i></a>
+                        <img src="{{asset('Main/img/feature/feature_4.png')}}" alt="">
                     </div>
                 </div>
             </div>
@@ -361,7 +361,7 @@
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-6 col-md-6">
                     <div class="offer_img">
-                        <img src="{{asset('Main\img/offer_img.png')}}" alt="">
+                        <img src="{{asset('Main/img/offer_img.png')}}" alt="">
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
@@ -380,7 +380,7 @@
                             <input type="text" class="form-control" placeholder="enter email address"
                                 aria-label="Recipient's username" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <a href="{{asset('Main\#" class="input-group-text btn_2" id="basic-addon2">book now</a>
+                                <a href="{{asset('Main/#" class="input-group-text btn_2" id="basic-addon2">book now</a>
                             </div>
                         </div>
                     </div>
@@ -404,35 +404,35 @@
                 <div class="col-lg-12">
                     <div class="best_product_slider owl-carousel">
                         <div class="single_product_item">
-                            <img src="{{asset('Main\img/product/product_1.png')}}" alt="">
+                            <img src="{{asset('Main/img/product/product_1.png')}}" alt="">
                             <div class="single_product_text">
                                 <h4>Quartz Belt Watch</h4>
                                 <h3>$150.00</h3>
                             </div>
                         </div>
                         <div class="single_product_item">
-                            <img src="{{asset('Main\img/product/product_2.png')}}" alt="">
+                            <img src="{{asset('Main/img/product/product_2.png')}}" alt="">
                             <div class="single_product_text">
                                 <h4>Quartz Belt Watch</h4>
                                 <h3>$150.00</h3>
                             </div>
                         </div>
                         <div class="single_product_item">
-                            <img src="{{asset('Main\img/product/product_3.png')}}" alt="">
+                            <img src="{{asset('Main/img/product/product_3.png')}}" alt="">
                             <div class="single_product_text">
                                 <h4>Quartz Belt Watch</h4>
                                 <h3>$150.00</h3>
                             </div>
                         </div>
                         <div class="single_product_item">
-                            <img src="{{asset('Main\img/product/product_4.png')}}" alt="">
+                            <img src="{{asset('Main/img/product/product_4.png')}}" alt="">
                             <div class="single_product_text">
                                 <h4>Quartz Belt Watch</h4>
                                 <h3>$150.00</h3>
                             </div>
                         </div>
                         <div class="single_product_item">
-                            <img src="{{asset('Main\img/product/product_5.png')}}" alt="">
+                            <img src="{{asset('Main/img/product/product_5.png')}}" alt="">
                             <div class="single_product_text">
                                 <h4>Quartz Belt Watch</h4>
                                 <h3>$150.00</h3>
@@ -461,34 +461,34 @@
                 </div>
                 <div class="col-lg-12">
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_1.png')}}" alt="">
+                        <img src="{{asset('Main/img/client_logo/client_logo_1.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_2.png')}}" alt="">
+                        <img src="{{asset('Main/img/client_logo/client_logo_2.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_3.png')}}" alt="">
+                        <img src="{{asset('Main/img/client_logo/client_logo_3.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_4.png')}}" alt="">
+                        <img src="{{asset('Main/img/client_logo/client_logo_4.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_5.png')}}" alt="">
+                        <img src="{{asset('Main/img/client_logo/client_logo_5.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_3.png')}}" alt="">
+                        <img src="{{asset('Main/img/client_logo/client_logo_3.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_1.png')}}" alt="">
+                        <img src="{{asset('Main/img/client_logo/client_logo_1.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_2.png')}}" alt="">
+                        <img src="{{asset('Main/img/client_logo/client_logo_2.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_3.png')}}" alt="">
+                        <img src="{{asset('Main/img/client_logo/client_logo_3.png')}}" alt="">
                     </div>
                     <div class="single_client_logo">
-                        <img src="{{asset('Main\img/client_logo/client_logo_4.png')}}" alt="">
+                        <img src="{{asset('Main/img/client_logo/client_logo_4.png')}}" alt="">
                     </div>
                 </div>
             </div>
@@ -504,10 +504,10 @@
                  <div class="single_footer_part">
                     <h4>Top Products</h4>
                     <ul class="list-unstyled">
-                       <li><a href="{{asset('Main\">Electronics</a></li>
-                       <li><a href="{{asset('Main\">Fashion</a></li>
-                       <li><a href="{{asset('Main\">Sports</a></li>
-                       <li><a href="{{asset('Main\">Books</a></li>
+                       <li><a href="{{asset('Main/">Electronics</a></li>
+                       <li><a href="{{asset('Main/">Fashion</a></li>
+                       <li><a href="{{asset('Main/">Sports</a></li>
+                       <li><a href="{{asset('Main/">Books</a></li>
                     </ul>
                  </div>
               </div>
@@ -516,10 +516,10 @@
                  <div class="single_footer_part">
                     <h4>Features</h4>
                     <ul class="list-unstyled">
-                       <li><a href="{{asset('Main\">Augmented View</a></li>
-                       <li><a href="{{asset('Main\">Live Tracking</a></li>
-                       <li><a href="{{asset('Main\">Essential Recommendation</a></li>
-                       <li><a href="{{asset('Main\">Easy Pay</a></li>
+                       <li><a href="{{asset('Main/">Augmented View</a></li>
+                       <li><a href="{{asset('Main/">Live Tracking</a></li>
+                       <li><a href="{{asset('Main/">Essential Recommendation</a></li>
+                       <li><a href="{{asset('Main/">Easy Pay</a></li>
                     </ul>
                  </div>
               </div>
@@ -555,10 +555,10 @@
                  <div class="col-lg-4">
                     <div class="footer_icon social_icon">
                        <ul class="list-unstyled">
-                          <li><a href="{{asset('Main\#" class="single_social_icon"><i class="fab fa-facebook-f"></i></a></li>
-                          <li><a href="{{asset('Main\#" class="single_social_icon"><i class="fab fa-twitter"></i></a></li>
-                          <li><a href="{{asset('Main\#" class="single_social_icon"><i class="fas fa-globe"></i></a></li>
-                          <li><a href="{{asset('Main\#" class="single_social_icon"><i class="fab fa-behance"></i></a></li>
+                          <li><a href="{{asset('Main/#" class="single_social_icon"><i class="fab fa-facebook-f"></i></a></li>
+                          <li><a href="{{asset('Main/#" class="single_social_icon"><i class="fab fa-twitter"></i></a></li>
+                          <li><a href="{{asset('Main/#" class="single_social_icon"><i class="fas fa-globe"></i></a></li>
+                          <li><a href="{{asset('Main/#" class="single_social_icon"><i class="fab fa-behance"></i></a></li>
                        </ul>
                     </div>
                  </div>
@@ -569,33 +569,33 @@
     <!--::footer_part end::-->
 
     <!-- jquery plugins here-->
-    <script src="{{asset('Main\js/jquery-1.12.1.min.js')}}"></script>
+    <script src="{{asset('Main/js/jquery-1.12.1.min.js')}}"></script>
     <!-- popper js -->
-    <script src="{{asset('Main\js/popper.min.js')}}"></script>
+    <script src="{{asset('Main/js/popper.min.js')}}"></script>
     <!-- bootstrap js -->
-    <script src="{{asset('Main\js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('Main/js/bootstrap.min.js')}}"></script>
     <!-- easing js -->
-    <script src="{{asset('Main\js/jquery.magnific-popup.js')}}"></script>
+    <script src="{{asset('Main/js/jquery.magnific-popup.js')}}"></script>
     <!-- swiper js -->
-    <script src="{{asset('Main\js/swiper.min.js')}}"></script>
+    <script src="{{asset('Main/js/swiper.min.js')}}"></script>
     <!-- swiper js -->
-    <script src="{{asset('Main\js/masonry.pkgd.js')}}"></script>
+    <script src="{{asset('Main/js/masonry.pkgd.js')}}"></script>
     <!-- particles js -->
-    <script src="{{asset('Main\js/owl.carousel.min.js')}}"></script>
-    <script src="{{asset('Main\js/jquery.nice-select.min.js')}}"></script>
+    <script src="{{asset('Main/js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('Main/js/jquery.nice-select.min.js')}}"></script>
     <!-- slick js -->
-    <script src="{{asset('Main\js/slick.min.js')}}"></script>
-    <script src="{{asset('Main\js/jquery.counterup.min.js')}}"></script>
-    <script src="{{asset('Main\js/waypoints.min.js')}}"></script>
-    <script src="{{asset('Main\js/contact.js')}}"></script>
-    <script src="{{asset('Main\js/jquery.ajaxchimp.min.js')}}"></script>
-    <script src="{{asset('Main\js/jquery.form.js')}}"></script>
-    <script src="{{asset('Main\js/jquery.validate.min.js')}}"></script>
-    <script src="{{asset('Main\js/mail-script.js')}}"></script>
+    <script src="{{asset('Main/js/slick.min.js')}}"></script>
+    <script src="{{asset('Main/js/jquery.counterup.min.js')}}"></script>
+    <script src="{{asset('Main/js/waypoints.min.js')}}"></script>
+    <script src="{{asset('Main/js/contact.js')}}"></script>
+    <script src="{{asset('Main/js/jquery.ajaxchimp.min.js')}}"></script>
+    <script src="{{asset('Main/js/jquery.form.js')}}"></script>
+    <script src="{{asset('Main/js/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('Main/js/mail-script.js')}}"></script>
     <!-- custom js -->
 
-    <script src="{{asset('Main\https://kit.fontawesome.com/588cda5f94.js')}}" crossorigin="anonymous"></script>
-    <script src="{{asset('Main\js/custom.js')}}"></script>
+    <script src="{{asset('Main/https://kit.fontawesome.com/588cda5f94.js')}}" crossorigin="anonymous"></script>
+    <script src="{{asset('Main/js/custom.js')}}"></script>
 </body>
 
 </html>
